@@ -15,34 +15,30 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ... -->
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=150&color=gradient&text=Hello%20There!&section=header&reversal=false&textBg=false&animation=fadeIn&fontAlignY=60&desc=Welcome!&descAlignY=95&descSize=25"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=gradient&text=Hello%20There!&section=header&reversal=false&textBg=false&animation=fadeIn&fontAlignY=60&desc=Welcome!&descAlignY=95&descSize=25"/>
 </p>
 
 <h1 align="center">
   Let's Connect and have a Chat!💬
 </h1>
 
-<p align="center">
-<a href="https://vkrishna04.github.io/">
-  <img height="50" src="https://user-images.githubusercontent.com/46517096/166972883-f5f1d88c-0246-4374-88ac-ded0f2cf0699.png"/>
-</a>
-<a href="https://www.linkedin.com/in/krishnagsvv/">
-  <img height="50" src="https://user-images.githubusercontent.com/46517096/166973395-19676cd8-f8ec-4abf-83ff-da8243505b82.png"/>
-</a>
-<a href="https://dev.to/vkrishna04">
-  <img height="50" src="https://user-images.githubusercontent.com/46517096/166974096-7aeecad4-483e-4c85-983f-f4b37b3f794e.png"/>
-</a>
-<a href="https://twitter.com/Ipiyushmalhotra">
-  <img height="50" src="https://user-images.githubusercontent.com/46517096/166974271-91dfa250-d70b-4cb9-8707-f1bda1b708c3.png"/>
-</a>
-<a href="https://www.instagram.com/thepiyushmalhotra/">
-  <img height="50" src="https://user-images.githubusercontent.com/46517096/166974368-9798f39f-1f46-499c-b14e-81f0a3f83a06.png"/>
-
+<div align="center">
+<p>
+<a href="https://x.com/krishnagsvv"> <img src="https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white" alt = "X"></a>
+<a href="https://www.linkedin.com/in/krishnagsvv"> <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt = "LinkedIn"></a>
+<a href="https://vkrishna04.github.io"> <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt = "GitHub"></a>
+<a href="https://dev.to/vkrishna04"> <img src="https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white" alt = "Dev.to blog"></a>
 </p>
+<p>
+<a href="krishnagsvv@gmail.com"> <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt = "Gmail"></a>
+<a href="https://www.instagram.com/vkrishna_04"> <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" alt = "Instagram"></a>
+<a href="https://in.pinterest.com/VKrishna04/"> <img src="https://img.shields.io/badge/Pinterest-%23E60023.svg?style=for-the-badge&logo=Pinterest&logoColor=white" alt = "Pinterest"></a>
+<a href="https://www.reddit.com/user/Krishnalsh04/"> <img src="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white" alt = "Reddit"></a>
+</p>
+</div>
 
----
+![👨🏻‍💻 A Little Bit About Me and My Interests](https://capsule-render.vercel.app/api?type=venom&height=250&color=gradient&text=👨🏻‍💻%20About%20Me&animation=fadeIn)
 
-<h2> 👨🏻‍💻 &nbsp;A Little Bit About Me and My Interests</h2>
 
 ```yaml
 name: Krishna GSVV
@@ -52,35 +48,36 @@ located_in: Bengaluru, India
 current_job: Under Grad Student
 education:
   [
-    "Student at Amrita Vishwa Vidyapeetham",
-    "Bachelor's in Computer Science and Engineering",
+    "Student at Amrita Vishwa Vidyapeetham.",
+    "Currently Pursuing Bachelor's in Computer Science and Engineering at AVV.",
   ]
 # company:
 
 fields_of_interests:
   [
-    "Web Development",
-    "Data Science",
-    "Machine Learning",
-    "Deep Learning",
+    "Backend Development",
+    "Data Structures and Algorithms",
     "Cloud Computing",
-    "DevOps",
-    "UI/UX Design",
-    "Game Development",
-    "Internet of Things (IoT)",
-    "VLSI and FPGA Implementation",
+    "Data Science",
+    "Deep Learning",
   ]
 
+technical_background:
+  [
+    "Backend Developer",
+    "Cloud Computing Enthusiast",
+    "Full Stack Developer",
+    "Deep Learning Enthusiast",
+  ]
 
 currently_learning: ["Java, Docker, Kubernetes, and React Native"]
-2024 Goals: ["Create 7+ Projects and learn at least 2-5 new Technologies."]
-hobbies: ["Gaming", "Cinema", "Novels", "Art", "Comedy"]
+2025 Goals: ["Create 10+ Projects and learn at least 5-7 new Technologies."]
+hobbies: ["Gaming", "Cinema", "Novels", "Art", "Comedy", "Anime"]
 ```
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=egg&height=100&color=gradient&section=header&reversal=false&textBg=false&animation=fadeIn&fontAlignY=60&descAlignY=95"/>
-</p>
 
----
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=egg&height=75&color=gradient&section=header&reversal=false&textBg=false&animation=fadeIn&fontAlignY=60&descAlignY=95"/>
+</p>
 
 <h2> 🚀 &nbsp;Some Tools I Have Used or Currently Learning</h2>
 <p align="center">
@@ -126,21 +123,34 @@ hobbies: ["Gaming", "Cinema", "Novels", "Art", "Comedy"]
 </p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=egg&height=100&color=gradient&section=footer&reversal=false&textBg=false&animation=fadeIn&fontAlignY=60&descAlignY=95"/>
+  <img src="https://capsule-render.vercel.app/api?type=egg&height=75&color=gradient&section=footer&reversal=false&textBg=false&animation=fadeIn&fontAlignY=60&descAlignY=95"/>
 </p>
+
 ---
 
-<p align="left"> <a href="https://vkrishna04.github.io"> <img src="https://visitcount.itsvg.in/api?id=VKrishna04&label=Profile%20Views&color=12&pretty=true" alt="VKrishna04" /> </a> </p>
+<p align="center">
+<a href="https://leetcode.com/u/VKrishna04/"><img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06" alt = "LeetCode"></a>
+<a href="https://www.hackerrank.com/profile/VKrishna04"><img src="https://img.shields.io/badge/-Hackerrank-2EC866?style=for-the-badge&logo=HackerRank&logoColor=white)" alt = "Hackerrank"></a>
+<a href="https://www.kaggle.com/krishnagsvv"><img src="https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white" alt = "Kaggle"></a>
+<a href=""><img src="https://img.shields.io/badge/github_copilot-8957E5?style=for-the-badge&logo=github-copilot&logoColor=white" alt = "GitHub Copilot"></a>
+<a href=""><img src="https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white" alt = "ChatGPT"></a>
+<a href="https://vkrishna04.github.io/"><img src="https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white" alt = "Github Pages"></a>
+<a href=""><img src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white" alt = "Vercel"></a>
+<!-- <a href=""><img src="https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green" alt = "PyCharm"></a> -->
+<a href="https://open.spotify.com/user/drz1bknr8dy7yo88gwzi9nl3d?si=86da6e56d31d4ea0"><img src="https://img.shields.io/badge/Spotify-1ED760?style=for-the-badge&logo=spotify&logoColor=white" alt = "Spotify"></a>
+<a href="https://music.youtube.com/channel/UCh918uhzsqX-D32Etxq61eQ?si=Uvyy7e6Pg0Ye7BSK"><img src="https://img.shields.io/badge/YouTube_Music-FF0000?style=for-the-badge&logo=youtube-music&logoColor=white" alt = "YouTube Music"></a>
+<a href=""><img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white" alt = "AWS"></a>
+<a href="https://vkrishna04.github.io"> <img src="https://visitcount.itsvg.in/api?id=VKrishna04&label=Profile%20Views&color=12&pretty=true" alt="VKrishna04" /> </a>
+</p>
 
 <p align="center"> <img src="https://github-profile-trophy.vercel.app/?username=vkrishna04&row=2&column=4" alt="VKrishna04" /> </p>
 
----
 
 <p align="left">
 <h3 align="left">My Github Stats 📊:</h3>
 </p>
 
-<div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around;" align = "justify">
     <div style="flex: 1; min-width: 350px;">
         <img src="https://github-readme-stats.vercel.app/api/top-langs?username=vkrishna04&theme=dark&hide_border=false&show_icons=true&locale=en&layout=compact" alt="VKrishna04" />
     </div>
@@ -155,9 +165,8 @@ hobbies: ["Gaming", "Cinema", "Novels", "Art", "Comedy"]
 ---
 
 ### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical?border=true)
 
----
 
 <footer align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&height=250&color=gradient&section=footer&reversal=false&textBg=false&animation=fadeIn&fontAlignY=60&descAlignY=95"/>
