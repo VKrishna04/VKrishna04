@@ -46,7 +46,8 @@ Here are some ideas to get you started:
 
 ```yaml
 name: Krishna GSVV
-description: "I am a passionate learner and a tech enthusiast  developer from India who loves to explore new technologies and frameworks."
+description: "I am a passionate learner and a tech enthusiast developer
+from India who loves to explore new technologies and frameworks."
 located_in: Bengaluru, India
 current_job: Under Grad Student
 education:
@@ -61,28 +62,28 @@ fields_of_interests:
     "Web Development",
     "Data Science",
     "Machine Learning",
-    "UI/UX",
-    "Game Development",
+    "Deep Learning",
+    "Cloud Computing",
     "DevOps",
-  ]
-technical_background:
-  [
-    "Full Stack Developer"
-    "DevOps Solutions Architect",
-    "Intern - Data Science & Machine Learning in Python",
-    "Intern - Internet Of Things",
-    "Intern - VLSI and FPGA Implementation",
+    "UI/UX Design",
+    "Game Development",
+    "Internet of Things (IoT)",
+    "VLSI and FPGA Implementation",
   ]
 
-currently_learning: ["Docker, Kubernetes, and React Native"]
-2024 Goals: ["Create 25+ Projects and learn at least 5-10 new Technologies."]
-hobbies: ["Gaming", "Cinema", "Skateboarding", "Art", "Comedy"]
+
+currently_learning: ["Java, Docker, Kubernetes, and React Native"]
+2024 Goals: ["Create 7+ Projects and learn at least 2-5 new Technologies."]
+hobbies: ["Gaming", "Cinema", "Novels", "Art", "Comedy"]
 ```
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=egg&height=100&color=gradient&section=header&reversal=false&textBg=false&animation=fadeIn&fontAlignY=60&descAlignY=95"/>
+</p>
 
 ---
 
 <h2> 🚀 &nbsp;Some Tools I Have Used or Currently Learning</h2>
-<p align="left">
+<p align="center">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="vscode" width="45" height="45"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="python" width="45" height="45"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"  alt="java" width="45" height="45" />
@@ -93,6 +94,8 @@ hobbies: ["Gaming", "Cinema", "Skateboarding", "Art", "Comedy"]
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="react" width="45" height="45" />
 <!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original-wordmark.svg" alt="VueJS" width="45" height="45"/> -->
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html" width="45" height="45"/>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="45" height="45" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg" alt="bootstrap" width="45" height="45" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kaggle/kaggle-original.svg" alt="kaggle" width="45" height="45" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg" alt="jupyter" width="45" height="45" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" alt="numpy" width="45" height="45" />
@@ -103,8 +106,6 @@ hobbies: ["Gaming", "Cinema", "Skateboarding", "Art", "Comedy"]
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="postgresql" width="45" height="45" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pycharm/pycharm-original.svg" alt="pycharm" width="45" height="45" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="github" width="45" height="45" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg" alt="bootstrap" width="45" height="45" />
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="45" height="45" />
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" alt="mongodb" width="45" height="45" />
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="45" height="45" />
 <!-- <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="45" height="45" /> -->
@@ -124,27 +125,39 @@ hobbies: ["Gaming", "Cinema", "Skateboarding", "Art", "Comedy"]
 
 </p>
 
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=egg&height=100&color=gradient&section=footer&reversal=false&textBg=false&animation=fadeIn&fontAlignY=60&descAlignY=95"/>
+</p>
 ---
 
 <p align="left"> <a href="https://vkrishna04.github.io"> <img src="https://visitcount.itsvg.in/api?id=VKrishna04&label=Profile%20Views&color=12&pretty=true" alt="VKrishna04" /> </a> </p>
 
-<p align="left"> <img src="https://github-profile-trophy.vercel.app/?username=vkrishna04&column=-1" alt="VKrishna04" /> </p>
+<p align="center"> <img src="https://github-profile-trophy.vercel.app/?username=vkrishna04&row=2&column=4" alt="VKrishna04" /> </p>
 
-<h3 align="left">My Github Stats:</h3>
+---
+
 <p align="left">
+<h3 align="left">My Github Stats 📊:</h3>
 </p>
 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-    <div style="flex: 1; min-width: 300px;">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs?username=vkrishna04&show_icons=true&locale=en&layout=compact" alt="VKrishna04" />
+    <div style="flex: 1; min-width: 350px;">
+        <img src="https://github-readme-stats.vercel.app/api/top-langs?username=vkrishna04&theme=dark&hide_border=false&show_icons=true&locale=en&layout=compact" alt="VKrishna04" />
     </div>
     <div style="flex: 1; min-width: 300px;">
-        <img src="https://github-readme-stats.vercel.app/api?username=vkrishna04&show_icons=true&locale=en" alt="VKrishna04" />
+        <img src="https://github-readme-stats.vercel.app/api?username=vkrishna04&theme=dark&hide_border=false&show_icons=true&locale=en" alt="VKrishna04" />
     </div>
     <div style="flex: 1; min-width: 300px;">
-        <img src="https://github-readme-streak-stats.herokuapp.com/?user=vkrishna04&" alt="VKrishna04" />
+        <img src="https://github-readme-streak-stats.herokuapp.com/?user=vkrishna04&theme=dark&hide_border=false" alt="VKrishna04" />
     </div>
 </div>
+
+---
+
+### ✍️ Random Dev Quote
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+
+---
 
 <footer align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&height=250&color=gradient&section=footer&reversal=false&textBg=false&animation=fadeIn&fontAlignY=60&descAlignY=95"/>
