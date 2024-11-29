@@ -47,62 +47,39 @@ Here are some ideas to get you started:
 
 ```json
 {
-  "name": "Krishna GSVV",
-  "description": "I am a passionate learner and a tech enthusiast developer from India who loves to explore new technologies and frameworks.",
-  "located_in": "Bengaluru, India",
-  "current_job": "Under Grad Student",
-  "education": [
-<div style="text-align: center;">
-    <img src="https://capsule-render.vercel.app/api?type=venom&height=250&color=gradient&text=👨🏻‍💻%20About%20Me&animation=fadeIn" alt="👨🏻‍💻 A Little Bit About Me and My Interests">
-</div>
-
-```json
-{
-  "name": "Krishna GSVV",
-  "description": "I am a passionate learner and a tech enthusiast developer from India who loves to explore new technologies and frameworks.",
-  "located_in": "Bengaluru, India",
-  "current_job": "Under Grad Student",
-  "education": [
-    "Student at Amrita Vishwa Vidyapeetham.",
-    "Currently Pursuing Bachelor's in Computer Science and Engineering at AVV."
-  ],
-  "fields_of_interests": [
-    "Currently Pursuing Bachelor's in Computer Science and Engineering at AVV."
-  ],
-  "fields_of_interests": [
-    "Backend Development",
-    "Data Structures and Algorithms",
-    "Cloud Computing",
-    "Data Science",
-    "Deep Learning"
-  ],
-  "technical_background": [
-    "Deep Learning"
-  ],
-  "technical_background": [
-    "Backend Developer",
-    "Cloud Computing Enthusiast",
-    "Full Stack Developer",
-    "Deep Learning Enthusiast"
-  ],
-  "currently_learning": ["Java, Docker, and React Native"],
-  "2025 Goals": ["Create 10+ Projects and learn at least 5-7 new Technologies."],
-  "hobbies": ["Novels", "Cinema", "Comedy", "Anime", "Outdoor Games"]
-}
-    "Deep Learning Enthusiast"
-  ],
-  "currently_learning": ["Java, Docker, and React Native"],
-  "2025 Goals": ["Create 10+ Projects and learn at least 5-7 new Technologies."],
-  "hobbies": ["Novels", "Cinema", "Comedy", "Anime", "Outdoor Games"]
+  	"name": "Krishna GSVV",
+  	"description": "I am a passionate learner and a tech enthusiast developer from India who loves to explore new technologies and frameworks.",
+  	"located_in": "Bengaluru, India",
+	"current_job": "Under Grad Student",
+	"education": [
+    	"Student at Amrita Vishwa Vidyapeetham.",
+    	"Currently Pursuing Bachelor's in Computer Science and Engineering at AVV."
+  	],
+  	"fields_of_interests": [
+    	"Backend Development",
+    	"Data Structures and Algorithms",
+    	"Cloud Computing",
+    	"Data Science",
+    	"Deep Learning"
+  	],
+  	"technical_background": [
+    	"Backend Developer",
+    	"Cloud Computing Enthusiast",
+    	"Full Stack Developer",
+    	"Deep Learning Enthusiast"
+  	],
+  	"currently_learning": ["Java, Docker, and React Native"],
+  	"2025 Goals": ["Create 10+ Projects and learn at least 5-7 new Technologies."],
+  	"hobbies": ["Novels", "Cinema", "Comedy", "Anime", "Outdoor Games"]
 }
 ```
 
-<p align="center">
+<p align="center" style="text-align: center;">
   <img src="https://capsule-render.vercel.app/api?type=egg&height=75&color=gradient&section=header&reversal=false&textBg=false&animation=fadeIn&fontAlignY=60&descAlignY=95"/>
 </p>
 
 <h2> 🚀 &nbsp;Some Tools I Have Used or Currently Learning</h2>
-<p align="center">
+<p align="center" style="text-align: center;">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="vscode" width="45" height="45"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="python" width="45" height="45"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"  alt="java" width="45" height="45" />
