@@ -16,6 +16,8 @@ Here are some ideas to get you started:
 
 <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
+<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=gradient&text=Hello%20There!&section=header&reversal=false&textBg=false&animation=fadeIn&fontAlignY=60&desc=Welcome!&descAlignY=95&descSize=25"/>
 </p>
@@ -32,7 +34,7 @@ Here are some ideas to get you started:
 <a href="https://dev.to/vkrishna04"> <img src="https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white" alt = "Dev.to blog"></a>
 </p>
 <p>
-<a href="mailto:krishnagsvv@gmail.com"> <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt = "Gmail"></a>
+<a href="mailto:mailto:krishnagsvv@gmail.com"> <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt = "Gmail"></a>
 <a href="https://www.instagram.com/vkrishna_04"> <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" alt = "Instagram"></a>
 <a href="https://in.pinterest.com/VKrishna04/"> <img src="https://img.shields.io/badge/Pinterest-%23E60023.svg?style=for-the-badge&logo=Pinterest&logoColor=white" alt = "Pinterest"></a>
 <a href="https://www.reddit.com/user/Krishnalsh04/"> <img src="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white" alt = "Reddit"></a>
@@ -50,7 +52,21 @@ Here are some ideas to get you started:
   "located_in": "Bengaluru, India",
   "current_job": "Under Grad Student",
   "education": [
+<div style="text-align: center;">
+    <img src="https://capsule-render.vercel.app/api?type=venom&height=250&color=gradient&text=👨🏻‍💻%20About%20Me&animation=fadeIn" alt="👨🏻‍💻 A Little Bit About Me and My Interests">
+</div>
+
+```json
+{
+  "name": "Krishna GSVV",
+  "description": "I am a passionate learner and a tech enthusiast developer from India who loves to explore new technologies and frameworks.",
+  "located_in": "Bengaluru, India",
+  "current_job": "Under Grad Student",
+  "education": [
     "Student at Amrita Vishwa Vidyapeetham.",
+    "Currently Pursuing Bachelor's in Computer Science and Engineering at AVV."
+  ],
+  "fields_of_interests": [
     "Currently Pursuing Bachelor's in Computer Science and Engineering at AVV."
   ],
   "fields_of_interests": [
@@ -61,9 +77,18 @@ Here are some ideas to get you started:
     "Deep Learning"
   ],
   "technical_background": [
+    "Deep Learning"
+  ],
+  "technical_background": [
     "Backend Developer",
     "Cloud Computing Enthusiast",
     "Full Stack Developer",
+    "Deep Learning Enthusiast"
+  ],
+  "currently_learning": ["Java, Docker, and React Native"],
+  "2025 Goals": ["Create 10+ Projects and learn at least 5-7 new Technologies."],
+  "hobbies": ["Novels", "Cinema", "Comedy", "Anime", "Outdoor Games"]
+}
     "Deep Learning Enthusiast"
   ],
   "currently_learning": ["Java, Docker, and React Native"],
@@ -153,6 +178,7 @@ Here are some ideas to get you started:
 <h3 align="left">My Github Stats 📊:</h3>
 </p>
 
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around; text-align: center;" align = "center">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-around; text-align: center;" align = "center">
     <div style="flex: 1; min-width: 350px;">
         <img src="https://github-readme-stats.vercel.app/api/top-langs?username=vkrishna04&theme=dark&hide_border=false&show_icons=true&locale=en&layout=compact" alt="VKrishna04" />
