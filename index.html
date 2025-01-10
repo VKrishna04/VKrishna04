@@ -31,12 +31,21 @@
         function loadProjects() {
             // Load projects from GitHub repository
             fetch(`https://api.github.com/repos/${username}/${repo}/contents/project-files/counters`)
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
                 .then(data => {
-                    data.forEach(file => {
-                        const projectName = file.name.replace('.txt', '');
-                        createProjectTile(projectName);
-                    });
+                    if (Array.isArray(data)) {
+                        data.forEach(file => {
+                            const projectName = file.name.replace('.txt', '');
+                            createProjectTile(projectName);
+                        });
+                    } else {
+                        console.warn('No project files found.');
+                    }
                 })
                 .catch(error => {
                     console.error('Error loading projects:', error);
@@ -50,6 +59,30 @@
             }
             projects[projectName] = { count: 0 };
             createProjectTile(projectName);
+            createProjectFile(projectName);
+        }
+
+        function createProjectFile(projectName) {
+            fetch(`https://api.github.com/repos/${username}/${repo}/contents/project-files/counters/${projectName}.txt`, {
+                method: 'PUT',
+                headers: {
+                    'Authorization': `token ${token}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    message: `Create counter file for ${projectName}`,
+                    content: btoa('0')
+                })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to create project file');
+                }
+                console.log(`Project file for ${projectName} created successfully.`);
+            })
+            .catch(error => {
+                console.error('Error creating project file:', error);
+            });
         }
 
         function removeProject(projectName) {
@@ -145,13 +178,13 @@
 
         function displayUrls(projectName) {
             const viewUrl = `https://raw.githubusercontent.com/${username}/${repo}/main/project-files/counters/${projectName}.txt`;
-            const incrementUrl = `https://api.github.com/repos/${username}/${repo}/dispatches`;
+            const incrementUrl = `https://api.github.com/repos/${username}/${repo}/dispatches?project_name=${projectName}`;
 
             document.getElementById(`urls-${projectName}`).innerHTML = `
                 <p>View URL: <a href="${viewUrl}" target="_blank" class="text-blue-500">${viewUrl}</a></p>
                 <p>Increment URL: ${incrementUrl}</p>
                 <button onclick="copyToClipboard('${viewUrl}')" class="bg-gray-500 text-white px-4 py-2 rounded mb-2">Copy View URL</button>
-                <button onclick="copyToClipboard('${incrementUrl}')" class="bg-gray-500 text-white px-4 py-2 rounded">Copy Increment URL</button>
+                <button onclick="copyToClipboard('${incrementUrl}?project_name=${projectName}')" class="bg-gray-500 text-white px-4 py-2 rounded">Copy Increment URL</button>
             `;
         }
 
