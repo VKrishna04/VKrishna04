@@ -1,0 +1,10 @@
+{
+	"name": "project-visit-counter",
+	"version": "1.0.0",
+	"description": "A project visit counter using GitHub Actions and GitHub Pages",
+	"main": "index.js",
+	"repository": {},
+	"author": "@VKrishna04",
+	"license": "Copyright 2025",
+	"scripts": {}
+}
