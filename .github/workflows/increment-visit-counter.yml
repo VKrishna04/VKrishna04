@@ -5,6 +5,14 @@ on:
     types: [increment-counter]
   schedule:
     - cron: '0 * * * *' # Run every hour
+  workflow_dispatch:
+    inputs:
+      project_name:
+        description: 'Name of the project'
+        required: true
+      new_count:
+        description: 'New count for the project'
+        required: false
 
 env:
   PROJECT_FILES_DIR: project-files
@@ -22,12 +30,10 @@ jobs:
 
       - name: Load temporary storage
         id: load-temp
-        run: |
-          if [ -f ${{ env.PROJECT_FILES_DIR }}/temp_counters.json ]; then
-            cat ${{ env.PROJECT_FILES_DIR }}/temp_counters.json
-          else
-            echo '{}' > ${{ env.PROJECT_FILES_DIR }}/temp_counters.json
-          fi
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.PROJECT_FILES_DIR }}/temp_counters.json
+          key: ${{ runner.os }}-temp-counters
 
       - name: Increment or update counter
         id: increment-update
@@ -45,27 +51,29 @@ jobs:
           echo $TEMP_COUNTERS > ${{ env.PROJECT_FILES_DIR }}/temp_counters.json
 
       - name: Save temporary storage
-        run: |
-          cat ${{ env.PROJECT_FILES_DIR }}/temp_counters.json
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.PROJECT_FILES_DIR }}/temp_counters.json
+          key: ${{ runner.os }}-temp-counters
 
       - name: Check if project file exists
         id: check-file
         run: |
           PROJECT_NAME="${{ github.event.client_payload.project_name }}"
           if [ ! -f "${{ env.PROJECT_FILES_DIR }}/counters/$PROJECT_NAME.txt" ]; then
-            echo "file_exists=false" >> $GITHUB_ENV
+            echo "::set-output name=file_exists::false"
           else
-            echo "file_exists=true" >> $GITHUB_ENV
+            echo "::set-output name=file_exists::true"
           fi
 
       - name: Create new project file if it doesn't exist
-        if: env.file_exists == 'false'
+        if: ${{ steps.check-file.outputs.file_exists }} == 'false'
         run: |
           PROJECT_NAME="${{ github.event.client_payload.project_name }}"
           echo "0" > "${{ env.PROJECT_FILES_DIR }}/counters/$PROJECT_NAME.txt"
 
       - name: Commit changes if new project file is created
-        if: env.file_exists == 'false'
+        if: ${{ steps.check-file.outputs.file_exists }} == 'false'
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
@@ -84,12 +92,10 @@ jobs:
           mkdir -p ${{ env.PROJECT_FILES_DIR }}/counters
 
       - name: Load temporary storage
-        run: |
-          if [ -f ${{ env.PROJECT_FILES_DIR }}/temp_counters.json ]; then
-            cat ${{ env.PROJECT_FILES_DIR }}/temp_counters.json
-          else
-            echo '{}' > ${{ env.PROJECT_FILES_DIR }}/temp_counters.json
-          fi
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.PROJECT_FILES_DIR }}/temp_counters.json
+          key: ${{ runner.os }}-temp-counters
 
       - name: Update counters
         run: |

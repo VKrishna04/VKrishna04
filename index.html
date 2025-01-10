@@ -16,7 +16,7 @@
 
     <script>
         const username = 'VKrishna04';
-        const repo = 'project-visit-counter';
+        const repo = 'VKrishna04';
         const projects = {};
 
         document.getElementById('add-project-button').addEventListener('click', () => {
@@ -113,7 +113,8 @@
                 method: 'POST',
                 headers: {
                     'Accept': 'application/vnd.github.v3+json',
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
                 },
                 body: JSON.stringify({
                     event_type: 'increment-counter',
@@ -146,7 +147,8 @@
                 method: 'POST',
                 headers: {
                     'Accept': 'application/vnd.github.v3+json',
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
                 },
                 body: JSON.stringify({
                     event_type: 'increment-counter',
@@ -178,7 +180,7 @@
 
         function displayUrls(projectName) {
             const viewUrl = `https://raw.githubusercontent.com/${username}/${repo}/main/project-files/counters/${projectName}.txt`;
-            const incrementUrl = `https://api.github.com/repos/${username}/${repo}/dispatches?project_name=${projectName}`;
+            const incrementUrl = `https://api.github.com/repos/${username}/${repo}/dispatches`;
 
             document.getElementById(`urls-${projectName}`).innerHTML = `
                 <p>View URL: <a href="${viewUrl}" target="_blank" class="text-blue-500">${viewUrl}</a></p>
