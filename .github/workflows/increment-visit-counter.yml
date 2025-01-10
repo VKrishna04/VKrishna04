@@ -1,0 +1,78 @@
+name: Increment Visit Counter
+
+on:
+  repository_dispatch:
+    types: [increment-counter]
+  schedule:
+    - cron: '0 * * * *' # Run every hour
+
+env:
+  PROJECT_FILES_DIR: project-files
+
+jobs:
+  increment-counter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Ensure counters directory exists
+        run: |
+          mkdir -p ${{ env.PROJECT_FILES_DIR }}/counters
+
+      - name: Load temporary storage
+        id: load-temp
+        run: |
+          if [ -f ${{ env.PROJECT_FILES_DIR }}/temp_counters.json ]; then
+            cat ${{ env.PROJECT_FILES_DIR }}/temp_counters.json
+          else
+            echo '{}' > ${{ env.PROJECT_FILES_DIR }}/temp_counters.json
+          fi
+
+      - name: Increment or update counter
+        run: |
+          PROJECT_NAME=${{ github.event.client_payload.project_name }}
+          NEW_COUNT=${{ github.event.client_payload.new_count }}
+          TEMP_COUNTERS=$(cat ${{ env.PROJECT_FILES_DIR }}/temp_counters.json)
+          if [ -z "$NEW_COUNT" ]; then
+            COUNT=$(echo $TEMP_COUNTERS | jq -r --arg PROJECT_NAME "$PROJECT_NAME" '.[$PROJECT_NAME] // 0')
+            COUNT=$((COUNT + 1))
+          else
+            COUNT=$NEW_COUNT
+          fi
+          TEMP_COUNTERS=$(echo $TEMP_COUNTERS | jq --arg PROJECT_NAME "$PROJECT_NAME" --argjson COUNT "$COUNT" '.[$PROJECT_NAME] = $COUNT')
+          echo $TEMP_COUNTERS > ${{ env.PROJECT_FILES_DIR }}/temp_counters.json
+
+      - name: Save temporary storage
+        run: |
+          cat ${{ env.PROJECT_FILES_DIR }}/temp_counters.json
+
+  commit-changes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Load temporary storage
+        run: |
+          if [ -f ${{ env.PROJECT_FILES_DIR }}/temp_counters.json ]; then
+            cat ${{ env.PROJECT_FILES_DIR }}/temp_counters.json
+          else
+            echo '{}' > ${{ env.PROJECT_FILES_DIR }}/temp_counters.json
+          fi
+
+      - name: Update counters
+        run: |
+          TEMP_COUNTERS=$(cat ${{ env.PROJECT_FILES_DIR }}/temp_counters.json)
+          for PROJECT_NAME in $(echo $TEMP_COUNTERS | jq -r 'keys[]'); do
+            COUNT=$(echo $TEMP_COUNTERS | jq -r --arg PROJECT_NAME "$PROJECT_NAME" '.[$PROJECT_NAME]')
+            echo $COUNT > "${{ env.PROJECT_FILES_DIR }}/counters/$PROJECT_NAME.txt"
+          done
+
+      - name: Commit changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add ${{ env.PROJECT_FILES_DIR }}/counters/*.txt
+          git commit -m "Update counters"
+          git push
