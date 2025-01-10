@@ -85,8 +85,8 @@ Here are some ideas to get you started:
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"  alt="java" width="45" height="45" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="cLang" width="45" height="45"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="45" height="45"/>
-<!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" alt="django" width="45" height="45" /> -->
-<span class="devicon-django-plain" style="font-size: 48px;"></span>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" alt="django" width="45" height="45" style="filter: invert(1);"/>
+<!-- <span class="devicon-django-plain" style="font-size: 48px;"></span> -->
 <!-- <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt=svg"javascript" width="45" height="45" /> -->
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="react" width="45" height="45" />
 <!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original-wordmark.svg" alt="VueJS" width="45" height="45"/> -->
@@ -96,15 +96,15 @@ Here are some ideas to get you started:
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kaggle/kaggle-original.svg" alt="kaggle" width="45" height="45" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg" alt="jupyter" width="45" height="45" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" alt="numpy" width="45" height="45" />
-<!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" alt="pandas" width="45" height="45" /> -->
-<span class="devicon-pandas-plain" style="font-size: 48px;"></span>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" alt="pandas" width="45" height="45" style="filter: invert(1);"/>
+<!-- <span class="devicon-pandas-plain" style="font-size: 48px;"></span> -->
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" alt="tensorflow" width="45" height="45" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/keras/keras-original.svg" alt="keras" width="45" height="45" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/playwright/playwright-original.svg" alt="playwright" width="45" height="45" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="postgresql" width="45" height="45" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pycharm/pycharm-original.svg" alt="pycharm" width="45" height="45"/>
-<!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="github" width="45" height="45"/> -->
-<span class="devicon-github-original"  style="font-size: 48px;"></span>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="github" width="45" height="45" style="filter: invert(1);"/>
+<!-- <span class="devicon-github-original"  style="font-size: 48px;"></span> -->
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" alt="mongodb" width="45" height="45" />
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="45" height="45" />
 <!-- <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="45" height="45" /> -->
@@ -116,15 +116,16 @@ Here are some ideas to get you started:
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows11/windows11-original.svg" alt="windows 11" width="45" height="45" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" width="45" height="45"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="linux" width="45" height="45"/>
-<!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/latex/latex-original.svg" alt="latex" width="45" height="45"/> -->
-<span class="devicon-latex-original" style="font-size: 48px;"></span>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/latex/latex-original.svg" alt="latex" width="45" height="45" style="filter: invert(1);"/>
+<!-- <span class="devicon-latex-original" style="font-size: 48px;"></span> -->
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="git" width="45" height="45"/>
-<!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="bash" width="45" height="45"/> -->
-<span class="devicon-bash-plain" style="font-size: 48px;"></span>
-<span class="devicon-powershell-plain" style="font-size: 48px;"></span>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="bash" width="45" height="45" style="filter: invert(1);"/>
+<!-- <span class="devicon-bash-plain" style="font-size: 48px;"></span> -->
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/powershell/powershell-original.svg" alt="powershell" width="45" height="45" style="filter: invert(1);"/>
+<!-- <span class="devicon-powershell-plain" style="font-size: 48px;"></span> -->
 <!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="figma" width="45" height="45"/> -->
-<!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/markdown/markdown-original.svg" alt="markdown" width="45" height="45" /> -->
-<span class="devicon-markdown-original" style="font-size: 48px;"></span>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/markdown/markdown-original.svg" alt="markdown" width="45" height="45" style="filter: invert(1);"/>
+<!-- <span class="devicon-markdown-original" style="font-size: 48px;"></span> -->
 </p>
 
 <p align="center">
@@ -134,19 +135,20 @@ Here are some ideas to get you started:
 ---
 
 <p align="center">
-<a href="https://leetcode.com/u/VKrishna04/"><img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06" alt = "LeetCode"></a>
-<a href="https://www.hackerrank.com/profile/VKrishna04"><img src="https://img.shields.io/badge/-Hackerrank-2EC866?style=for-the-badge&logo=HackerRank&logoColor=white)" alt = "Hackerrank"></a>
-<a href="https://www.kaggle.com/krishnagsvv"><img src="https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white" alt = "Kaggle"></a>
-<a href=""><img src="https://img.shields.io/badge/github_copilot-8957E5?style=for-the-badge&logo=github-copilot&logoColor=white" alt = "GitHub Copilot"></a>
-<a href=""><img src="https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white" alt = "ChatGPT"></a>
-<a href="https://vkrishna04.github.io/"><img src="https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white" alt = "Github Pages"></a>
-<a href=""><img src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white" alt = "Vercel"></a>
-<!-- <a href=""><img src="https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green" alt = "PyCharm"></a> -->
-<a href="https://open.spotify.com/user/drz1bknr8dy7yo88gwzi9nl3d?si=86da6e56d31d4ea0"><img src="https://img.shields.io/badge/Spotify-1ED760?style=for-the-badge&logo=spotify&logoColor=white" alt = "Spotify"></a>
-<a href="https://music.youtube.com/channel/UCh918uhzsqX-D32Etxq61eQ?si=Uvyy7e6Pg0Ye7BSK"><img src="https://img.shields.io/badge/YouTube_Music-FF0000?style=for-the-badge&logo=youtube-music&logoColor=white" alt = "YouTube Music"></a>
-<a href=""><img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white" alt = "AWS"></a>
-<a href="https://vkrishna04.github.io"> <img src="https://visitcount.itsvg.in/api?id=VKrishna04&label=Profile%20Views&color=12&pretty=true" alt="VKrishna04" /> </a>
-</p>
+	<a href="https://leetcode.com/u/VKrishna04/"><img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06" alt = "LeetCode"></a>
+	<a href="https://www.hackerrank.com/profile/VKrishna04"><img src="https://img.shields.io/badge/-Hackerrank-2EC866?style=for-the-badge&logo=HackerRank&logoColor=white)" alt = "Hackerrank"></a>
+	<a href="https://www.kaggle.com/krishnagsvv"><img src="https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white" alt = "Kaggle"></a>
+	<a href=""><img src="https://img.shields.io/badge/github_copilot-8957E5?style=for-the-badge&logo=github-copilot&logoColor=white" alt = "GitHub Copilot"></a>
+	<a href=""><img src="https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white" alt = "ChatGPT"></a>
+	<a href="https://vkrishna04.github.io/"><img src="https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white" alt = "Github Pages"></a>
+	<a href=""><img src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white" alt = "Vercel"></a>
+	<!-- <a href=""><img src="https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green" alt = "PyCharm"></a> -->
+	<a href="https://open.spotify.com/user/drz1bknr8dy7yo88gwzi9nl3d?si=86da6e56d31d4ea0"><img src="https://img.shields.io/badge/Spotify-1ED760?style=for-the-badge&logo=spotify&logoColor=white" alt = "Spotify"></a>
+	<a href="https://music.youtube.com/channel/UCh918uhzsqX-D32Etxq61eQ?si=Uvyy7e6Pg0Ye7BSK"><img src="https://img.shields.io/badge/YouTube_Music-FF0000?style=for-the-badge&logo=youtube-music&logoColor=white" alt = "YouTube Music"></a>
+	<a href=""><img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white" alt = "AWS"></a>
+	<a href="https://vkrishna04.github.io"> <img src="https://visitcount.itsvg.in/api?id=VKrishna04&label=Profile%20Views&color=12&pretty=true" alt="VKrishna04" /> </a>
+    <!-- Badge for total number of visits -->
+    <img src="https://img.shields.io/endpoint?url=https://api.countapi.xyz/get/VKrishna04/visits" alt="Total Visits" /></p>
 
 <p align="center"> <img src="https://github-profile-trophy.vercel.app/?username=vkrishna04&row=2&column=4" alt="VKrishna04" /> </p>
 
