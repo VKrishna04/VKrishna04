@@ -28,6 +28,13 @@ jobs:
         run: |
           mkdir -p ${{ env.PROJECT_FILES_DIR }}/counters
 
+      - name: Check if temp_counters.json exists
+        id: check-temp-file
+        run: |
+          if [ ! -f "${{ env.PROJECT_FILES_DIR }}/temp_counters.json" ]; then
+            echo "{}" > "${{ env.PROJECT_FILES_DIR }}/temp_counters.json"
+          fi
+
       - name: Load temporary storage
         id: load-temp
         uses: actions/cache@v2
@@ -67,13 +74,13 @@ jobs:
           fi
 
       - name: Create new project file if it doesn't exist
-        if: ${{ steps.check-file.outputs.file_exists }} == 'false'
+        if: steps.check-file.outputs.file_exists == 'false'
         run: |
           PROJECT_NAME="${{ github.event.client_payload.project_name }}"
           echo "0" > "${{ env.PROJECT_FILES_DIR }}/counters/$PROJECT_NAME.txt"
 
       - name: Commit changes if new project file is created
-        if: ${{ steps.check-file.outputs.file_exists }} == 'false'
+        if: steps.check-file.outputs.file_exists == 'false'
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
