@@ -15,9 +15,8 @@
     <div id="project-tiles-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
 
     <script>
-        const username = '<your-username>';
-        const repo = '<your-repo>';
-        const token = '<your-personal-access-token>';
+        const username = 'VKrishna04';
+        const repo = 'project-visit-counter';
         const projects = {};
 
         document.getElementById('add-project-button').addEventListener('click', () => {
@@ -81,7 +80,6 @@
                 method: 'POST',
                 headers: {
                     'Accept': 'application/vnd.github.v3+json',
-                    'Authorization': `token ${token}`,
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
@@ -115,7 +113,6 @@
                 method: 'POST',
                 headers: {
                     'Accept': 'application/vnd.github.v3+json',
-                    'Authorization': `token ${token}`,
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
