@@ -15,41 +15,82 @@
     <div id="project-tiles-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
 
     <script>
-        const username = 'VKrishna04';
-        const repo = 'VKrishna04';
+        const username = '<your-username>';
+        const repo = '<your-repo>';
+        const token = '<your-personal-access-token>';
         const projects = {};
 
         document.getElementById('add-project-button').addEventListener('click', () => {
             const projectName = document.getElementById('project-name-input').value.trim();
             if (projectName) {
                 addProject(projectName);
+                saveProjects();
             } else {
                 alert('Please enter a project name.');
             }
         });
 
         function loadProjects() {
-            // Load projects from GitHub repository
-            fetch(`https://api.github.com/repos/${username}/${repo}/contents/project-files/counters`)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
+            // Load projects from GitHub artifact
+            fetch(`https://api.github.com/repos/${username}/${repo}/actions/artifacts`)
+                .then(response => response.json())
                 .then(data => {
-                    if (Array.isArray(data)) {
-                        data.forEach(file => {
-                            const projectName = file.name.replace('.txt', '');
-                            createProjectTile(projectName);
+                    const artifact = data.artifacts.find(a => a.name === 'ephemeral-counters');
+                    if (artifact) {
+                        fetch(artifact.archive_download_url, {
+                            headers: {
+                                'Authorization': `token ${token}`
+                            }
+                        })
+                        .then(response => response.blob())
+                        .then(blob => {
+                            const reader = new FileReader();
+                            reader.onload = function() {
+                                const counters = JSON.parse(reader.result);
+                                Object.keys(counters).forEach(projectName => {
+                                    projects[projectName] = { count: counters[projectName] };
+                                    createProjectTile(projectName);
+                                });
+                            };
+                            reader.readAsText(blob);
                         });
-                    } else {
-                        console.warn('No project files found.');
                     }
                 })
                 .catch(error => {
                     console.error('Error loading projects:', error);
                 });
+        }
+
+        function saveProjects() {
+            const counters = {};
+            Object.keys(projects).forEach(projectName => {
+                counters[projectName] = projects[projectName].count;
+            });
+
+            fetch(`https://api.github.com/repos/${username}/${repo}/actions/artifacts`, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/vnd.github.v3+json',
+                    'Authorization': `token ${token}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: 'ephemeral-counters',
+                    files: {
+                        'counters.json': JSON.stringify(counters)
+                    }
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    console.log('Projects saved successfully.');
+                } else {
+                    console.error('Error saving projects:', response.statusText);
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
         }
 
         function addProject(projectName) {
@@ -59,30 +100,6 @@
             }
             projects[projectName] = { count: 0 };
             createProjectTile(projectName);
-            createProjectFile(projectName);
-        }
-
-        function createProjectFile(projectName) {
-            fetch(`https://api.github.com/repos/${username}/${repo}/contents/project-files/counters/${projectName}.txt`, {
-                method: 'PUT',
-                headers: {
-                    'Authorization': `token ${token}`,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    message: `Create counter file for ${projectName}`,
-                    content: btoa('0')
-                })
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Failed to create project file');
-                }
-                console.log(`Project file for ${projectName} created successfully.`);
-            })
-            .catch(error => {
-                console.error('Error creating project file:', error);
-            });
         }
 
         function removeProject(projectName) {
@@ -93,15 +110,15 @@
         function createProjectTile(projectName) {
             const container = document.getElementById('project-tiles-container');
             const tile = document.createElement('div');
-            tile.className = 'relative bg-white p-4 rounded shadow-md';
+            tile.className = 'bg-white p-4 rounded shadow-md';
             tile.id = `tile-${projectName}`;
             tile.innerHTML = `
-                <button onclick="removeProject('${projectName}')" class="absolute top-2 right-2 text-red-500" title="Remove">&times;</button>
                 <h3 class="text-xl font-semibold mb-2">${projectName}</h3>
                 <p id="counter-${projectName}" class="mb-2">Counter: 0</p>
-                <button onclick="incrementCounter('${projectName}')" class="bg-green-500 text-white px-4 py-2 rounded mb-2" title="Increase by 1">Increment Counter</button>
-                <button onclick="updateCounterPrompt('${projectName}')" class="bg-yellow-500 text-white px-4 py-2 rounded mb-2" title="Edit Value">Update Count</button>
-                <button onclick="displayUrls('${projectName}')" class="bg-blue-500 text-white px-4 py-2 rounded mb-2" title="Get the URLs to integrate this tool into your project">Get URLs</button>
+                <button onclick="incrementCounter('${projectName}')" class="bg-green-500 text-white px-4 py-2 rounded mb-2">Increment Counter</button>
+                <button onclick="updateCounterPrompt('${projectName}')" class="bg-yellow-500 text-white px-4 py-2 rounded mb-2">Update Count</button>
+                <button onclick="displayUrls('${projectName}')" class="bg-blue-500 text-white px-4 py-2 rounded mb-2">Get URLs</button>
+                <button onclick="removeProject('${projectName}')" class="bg-red-500 text-white px-4 py-2 rounded">Remove Project</button>
                 <div id="urls-${projectName}" class="mt-2"></div>
             `;
             container.appendChild(tile);
@@ -113,8 +130,8 @@
                 method: 'POST',
                 headers: {
                     'Accept': 'application/vnd.github.v3+json',
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`
+                    'Authorization': `token ${token}`,
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
                     event_type: 'increment-counter',
@@ -126,6 +143,7 @@
             .then(response => {
                 if (response.ok) {
                     updateCounterDisplay(projectName);
+                    saveProjects();
                 } else {
                     console.error('Error:', response.statusText);
                 }
@@ -147,8 +165,8 @@
                 method: 'POST',
                 headers: {
                     'Accept': 'application/vnd.github.v3+json',
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`
+                    'Authorization': `token ${token}`,
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
                     event_type: 'increment-counter',
@@ -161,6 +179,7 @@
             .then(response => {
                 if (response.ok) {
                     updateCounterDisplay(projectName);
+                    saveProjects();
                 } else {
                     console.error('Error:', response.statusText);
                 }
@@ -171,10 +190,14 @@
         }
 
         function updateCounterDisplay(projectName) {
-            fetch(`https://raw.githubusercontent.com/${username}/${repo}/main/project-files/counters/${projectName}.txt`)
-                .then(response => response.text())
+            fetch(`https://api.github.com/repos/${username}/${repo}/contents/project-files/counters/${projectName}.txt`)
+                .then(response => response.json())
                 .then(data => {
-                    document.getElementById(`counter-${projectName}`).innerText = `Counter: ${data}`;
+                    const content = atob(data.content);
+                    document.getElementById(`counter-${projectName}`).innerText = `Counter: ${content}`;
+                })
+                .catch(error => {
+                    console.error('Error fetching counter:', error);
                 });
         }
 
@@ -186,7 +209,7 @@
                 <p>View URL: <a href="${viewUrl}" target="_blank" class="text-blue-500">${viewUrl}</a></p>
                 <p>Increment URL: ${incrementUrl}</p>
                 <button onclick="copyToClipboard('${viewUrl}')" class="bg-gray-500 text-white px-4 py-2 rounded mb-2">Copy View URL</button>
-                <button onclick="copyToClipboard('${incrementUrl}?project_name=${projectName}')" class="bg-gray-500 text-white px-4 py-2 rounded">Copy Increment URL</button>
+                <button onclick="copyToClipboard('${incrementUrl}')" class="bg-gray-500 text-white px-4 py-2 rounded">Copy Increment URL</button>
             `;
         }
 
