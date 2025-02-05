@@ -3,6 +3,19 @@ name: Increment Visit Counter
 on:
   repository_dispatch:
     types: [increment-counter]
+  # schedule:
+    # - cron: '0 * * * *' # Run every hour
+  workflow_dispatch:
+    inputs:
+      project_name:
+        description: 'Name of the project'
+        required: true
+      new_count:
+        description: 'New count for the project'
+        required: false
+
+env:
+  PROJECT_FILES_DIR: project-files
 
 jobs:
   increment-counter:
