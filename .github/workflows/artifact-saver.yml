@@ -1,0 +1,70 @@
+name: Artifact Saver
+
+on:
+  repository_dispatch:
+    types: ["save-artifacts"]
+  schedule:
+    - cron: '0 0 1 */2 *'  # Run every 2 months
+
+env:
+  PROJECT_FILES_DIR: project-files
+
+jobs:
+  save-artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        continue-on-error: true
+        with:
+          name: ephemeral-counters
+          path: ${{ env.PROJECT_FILES_DIR }}
+
+      - name: Save Counters
+        run: |
+          if [ -f ${{ env.PROJECT_FILES_DIR }}/counters.json ]; then
+            # Save current state before creating new artifact
+            cp ${{ env.PROJECT_FILES_DIR }}/counters.json ${{ env.PROJECT_FILES_DIR }}/counters_backup.json
+
+            mkdir -p ${{ env.PROJECT_FILES_DIR }}/counters
+            TEMP_COUNTERS=$(cat ${{ env.PROJECT_FILES_DIR }}/counters.json)
+
+            # Save to repository
+            for PROJECT_NAME in $(echo "$TEMP_COUNTERS" | jq -r 'keys[]'); do
+              COUNT=$(echo "$TEMP_COUNTERS" | jq -r --arg PROJECT_NAME "$PROJECT_NAME" '.[$PROJECT_NAME]')
+              echo "$COUNT" > "${{ env.PROJECT_FILES_DIR }}/counters/$PROJECT_NAME.txt"
+            done
+
+            # Create fresh counters.json from current txt files
+            echo "{}" > ${{ env.PROJECT_FILES_DIR }}/counters.json
+            for f in ${{ env.PROJECT_FILES_DIR }}/counters/*.txt; do
+              if [ -f "$f" ]; then
+                PROJECT_NAME=$(basename "$f" .txt)
+                COUNT=$(cat "$f")
+                TEMP_COUNTERS=$(cat ${{ env.PROJECT_FILES_DIR }}/counters.json)
+                echo "$TEMP_COUNTERS" | jq --arg name "$PROJECT_NAME" --arg count "$COUNT" '. + {($name): ($count|tonumber)}' > ${{ env.PROJECT_FILES_DIR }}/counters.json
+              fi
+            done
+
+            # Commit changes
+            git config --global user.name 'github-actions[bot]'
+            git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+            git add ${{ env.PROJECT_FILES_DIR }}/counters/*.txt
+
+            if [ "${{ github.event.client_payload.manual_trigger }}" = "true" ]; then
+              git commit -m "Manual save of counters and create new artifact"
+            else
+              git commit -m "Scheduled save of counters and create new artifact"
+            fi
+
+            git push
+          fi
+
+      - name: Upload new artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ephemeral-counters
+          path: ${{ env.PROJECT_FILES_DIR }}/counters.json

@@ -1,0 +1,94 @@
+name: Long-Running Incrementer
+
+on:
+  repository_dispatch:
+    types: [ "increment-counter" ]
+  schedule:
+    - cron: '0 0 * * *'  # Check daily for 85-day period
+
+env:
+  PROJECT_FILES_DIR: project-files
+
+jobs:
+  run-incrementer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        continue-on-error: true
+        with:
+          name: ephemeral-counters
+          path: ${{ env.PROJECT_FILES_DIR }}
+
+      - name: Process Counter Update
+        run: |
+          mkdir -p ${{ env.PROJECT_FILES_DIR }}
+
+          # Initialize or load counters
+          if [ ! -f ${{ env.PROJECT_FILES_DIR }}/counters.json ]; then
+            echo '{}' > ${{ env.PROJECT_FILES_DIR }}/counters.json
+          fi
+
+          PROJECT_NAME="${{ github.event.client_payload.project_name }}"
+          ACTION="${{ github.event.client_payload.action }}"
+          NEW_COUNT="${{ github.event.client_payload.new_count }}"
+
+          if [ -n "$PROJECT_NAME" ]; then
+            TEMP_COUNTERS=$(cat ${{ env.PROJECT_FILES_DIR }}/counters.json)
+
+            if [ "$ACTION" = "update" ] && [ -n "$NEW_COUNT" ]; then
+              TEMP_COUNTERS=$(echo "$TEMP_COUNTERS" | jq --arg PROJECT_NAME "$PROJECT_NAME" --argjson COUNT "$NEW_COUNT" '.[$PROJECT_NAME] = $COUNT')
+            else
+              COUNT=$(echo "$TEMP_COUNTERS" | jq -r --arg PROJECT_NAME "$PROJECT_NAME" '.[$PROJECT_NAME] // 0')
+              COUNT=$((COUNT + 1))
+              TEMP_COUNTERS=$(echo "$TEMP_COUNTERS" | jq --arg PROJECT_NAME "$PROJECT_NAME" --argjson COUNT "$COUNT" '.[$PROJECT_NAME] = $COUNT')
+            fi
+
+            echo "$TEMP_COUNTERS" > ${{ env.PROJECT_FILES_DIR }}/counters.json
+
+            # Also update the individual counter file for direct access
+            mkdir -p ${{ env.PROJECT_FILES_DIR }}/counters
+            echo "$COUNT" > "${{ env.PROJECT_FILES_DIR }}/counters/$PROJECT_NAME.txt"
+          fi
+
+      - name: Check Commit Period
+        id: check-period
+        run: |
+          if [ ! -f ${{ env.PROJECT_FILES_DIR }}/last_commit.txt ]; then
+            date +%s > ${{ env.PROJECT_FILES_DIR }}/last_commit.txt
+            echo "should_commit=true" >> $GITHUB_OUTPUT
+          else
+            last_commit=$(cat ${{ env.PROJECT_FILES_DIR }}/last_commit.txt)
+            now=$(date +%s)
+            days_passed=$(( (now - last_commit) / 86400 ))
+            if [ "$days_passed" -ge 85 ]; then
+              date +%s > ${{ env.PROJECT_FILES_DIR }}/last_commit.txt
+              echo "should_commit=true" >> $GITHUB_OUTPUT
+            else
+              echo "should_commit=false" >> $GITHUB_OUTPUT
+            fi
+          fi
+
+      - name: Commit Changes
+        if: steps.check-period.outputs.should_commit == 'true'
+        run: |
+          TEMP_COUNTERS=$(cat ${{ env.PROJECT_FILES_DIR }}/counters.json)
+          mkdir -p ${{ env.PROJECT_FILES_DIR }}/counters
+          for PROJECT_NAME in $(echo $TEMP_COUNTERS | jq -r 'keys[]'); do
+            COUNT=$(echo $TEMP_COUNTERS | jq -r --arg PROJECT_NAME "$PROJECT_NAME" '.[$PROJECT_NAME]')
+            echo $COUNT > "${{ env.PROJECT_FILES_DIR }}/counters/$PROJECT_NAME.txt"
+          done
+
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add ${{ env.PROJECT_FILES_DIR }}/counters/*.txt
+          git commit -m "Update counters after 85 days"
+          git push
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ephemeral-counters
+          path: ${{ env.PROJECT_FILES_DIR }}/counters.json
