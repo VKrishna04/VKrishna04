@@ -34,7 +34,8 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git remote set-url origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ env.OWNER }}/${{ env.REPO }}.git
+          git remote set-url origin "https://${{ secrets.PAT_TOKEN }}@github.com/${{ env.OWNER }}/${{ env.REPO }}.git"
+          git config --global --add safe.directory /github/workspace
 
       - name: Process Actions
         run: |
@@ -98,7 +99,6 @@ jobs:
 
           # Commit changes if any files were modified
           if [ -n "$(git status --porcelain)" ]; then
-            git add ${{ env.PROJECT_FILES_DIR }}/counters/*.txt
+            git add .
             git commit -m "Update counters"
-            git push origin HEAD:main
-          fi
+            git push -f origin HEAD:main
