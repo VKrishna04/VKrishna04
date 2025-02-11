@@ -24,18 +24,18 @@ env:
 jobs:
   process-counter:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.PAT_TOKEN }}
-          fetch-depth: 0
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Configure Git
+      - name: Set up Git authentication
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git remote set-url origin "https://${{ secrets.PAT_TOKEN }}@github.com/${{ env.OWNER }}/${{ env.REPO }}.git"
-          git config --global --add safe.directory /github/workspace
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git remote set-url origin "https://${{ github.token }}@github.com/${{ github.repository }}.git"
 
       - name: Process Actions
         run: |
