@@ -1,7 +1,0 @@
-{
-"event_type": "increment-counter",
-"client_payload": {
-	"project_name": "YourProjectName",
-	"action": "increment"
-}
-}

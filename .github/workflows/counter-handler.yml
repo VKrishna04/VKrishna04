@@ -12,44 +12,36 @@ on:
       "get-projects",
       "save-artifacts"
     ]
+  push:
+    paths:
+      - 'project-files/event.json'  # Trigger on event.json changes
 
 env:
-  PROJECT_FILES_DIR: project-files
+  PROJECT_FILES_DIR: ${{ vars.PROJECT_DIR }}
+  OWNER: ${{ vars.OWNER_NAME }}
+  REPO: ${{ vars.REPO_NAME }}
 
 jobs:
   process-counter:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Download artifact
-        uses: actions/download-artifact@v3
-        continue-on-error: true
+      - uses: actions/checkout@v2
         with:
-          name: ephemeral-counters
-          path: ${{ env.PROJECT_FILES_DIR }}
+          token: ${{ secrets.PAT_TOKEN }}
 
       - name: Process Actions
         run: |
           mkdir -p ${{ env.PROJECT_FILES_DIR }}/counters
 
-          if [ ! -f ${{ env.PROJECT_FILES_DIR }}/counters.json ]; then
-            echo '{}' > ${{ env.PROJECT_FILES_DIR }}/counters.json
-          fi
-
-          TEMP_COUNTERS=$(cat ${{ env.PROJECT_FILES_DIR }}/counters.json)
           EVENT_TYPE="${{ github.event.action }}"
           PROJECT_NAME="${{ github.event.client_payload.project_name }}"
           NEW_NAME="${{ github.event.client_payload.new_name }}"
           NEW_COUNT="${{ github.event.client_payload.new_count }}"
           ACTION="${{ github.event.client_payload.action }}"
-          BULK_DATA='${{ toJSON(github.event.client_payload.bulk_data) }}'
 
           case $EVENT_TYPE in
             "create-project")
               if [ ! -f "${{ env.PROJECT_FILES_DIR }}/counters/$PROJECT_NAME.txt" ]; then
-                echo "$TEMP_COUNTERS" | jq --arg name "$PROJECT_NAME" '. + {($name): 0}' > ${{ env.PROJECT_FILES_DIR }}/counters.json
                 echo "0" > "${{ env.PROJECT_FILES_DIR }}/counters/$PROJECT_NAME.txt"
                 echo "Project created: $PROJECT_NAME"
               else
@@ -58,62 +50,50 @@ jobs:
               fi
               ;;
 
-            "bulk-update")
-              echo "$BULK_DATA" > ${{ env.PROJECT_FILES_DIR }}/counters.json
-              for proj in $(echo "$BULK_DATA" | jq -r 'keys[]'); do
-                count=$(echo "$BULK_DATA" | jq -r --arg p "$proj" '.[$p]')
-                echo "$count" > "${{ env.PROJECT_FILES_DIR }}/counters/$proj.txt"
-              done
-              ;;
-
-            "get-projects")
-              ls ${{ env.PROJECT_FILES_DIR }}/counters/*.txt | xargs -n 1 basename | sed 's/.txt$//' > project_list.txt
-              ;;
-
             "rename-project")
-              COUNT=$(echo "$TEMP_COUNTERS" | jq -r --arg name "$PROJECT_NAME" '.[$name]')
-              TEMP_COUNTERS=$(echo "$TEMP_COUNTERS" | jq --arg old "$PROJECT_NAME" --arg new "$NEW_NAME" --arg count "$COUNT" 'del(.[$old]) + {($new): ($count|tonumber)}')
-              echo "$TEMP_COUNTERS" > ${{ env.PROJECT_FILES_DIR }}/counters.json
-              rm "${{ env.PROJECT_FILES_DIR }}/counters/$PROJECT_NAME.txt"
-              echo "$COUNT" > "${{ env.PROJECT_FILES_DIR }}/counters/$NEW_NAME.txt"
+              if [ -f "${{ env.PROJECT_FILES_DIR }}/counters/$PROJECT_NAME.txt" ]; then
+                mv "${{ env.PROJECT_FILES_DIR }}/counters/$PROJECT_NAME.txt" "${{ env.PROJECT_FILES_DIR }}/counters/$NEW_NAME.txt"
+              fi
               ;;
 
             "delete-project")
-              TEMP_COUNTERS=$(echo "$TEMP_COUNTERS" | jq --arg name "$PROJECT_NAME" 'del(.[$name])')
-              echo "$TEMP_COUNTERS" > ${{ env.PROJECT_FILES_DIR }}/counters.json
               rm -f "${{ env.PROJECT_FILES_DIR }}/counters/$PROJECT_NAME.txt"
               ;;
 
             "increment-counter"|"update-project")
               if [ "$ACTION" = "update" ] && [ -n "$NEW_COUNT" ]; then
-                TEMP_COUNTERS=$(echo "$TEMP_COUNTERS" | jq --arg name "$PROJECT_NAME" --argjson count "$NEW_COUNT" '.[$name] = $count')
+                echo "$NEW_COUNT" > "${{ env.PROJECT_FILES_DIR }}/counters/$PROJECT_NAME.txt"
               else
-                COUNT=$(echo "$TEMP_COUNTERS" | jq -r --arg name "$PROJECT_NAME" '.[$name] // 0')
-                COUNT=$((COUNT + 1))
-                TEMP_COUNTERS=$(echo "$TEMP_COUNTERS" | jq --arg name "$PROJECT_NAME" --argjson count "$COUNT" '.[$name] = $count')
+                COUNT=$(cat "${{ env.PROJECT_FILES_DIR }}/counters/$PROJECT_NAME.txt" || echo 0)
+                echo $((COUNT + 1)) > "${{ env.PROJECT_FILES_DIR }}/counters/$PROJECT_NAME.txt"
               fi
-              echo "$TEMP_COUNTERS" > ${{ env.PROJECT_FILES_DIR }}/counters.json
-              echo "$COUNT" > "${{ env.PROJECT_FILES_DIR }}/counters/$PROJECT_NAME.txt"
               ;;
 
-            "save-artifacts")
-              # Save current state and create new artifact
-              mkdir -p ${{ env.PROJECT_FILES_DIR }}/counters
-              for proj in $(echo "$TEMP_COUNTERS" | jq -r 'keys[]'); do
-                count=$(echo "$TEMP_COUNTERS" | jq -r --arg p "$proj" '.[$p]')
-                echo "$count" > "${{ env.PROJECT_FILES_DIR }}/counters/$proj.txt"
+            "get-projects")
+              echo "["
+              first=true
+              for f in ${{ env.PROJECT_FILES_DIR }}/counters/*.txt; do
+                if [ -f "$f" ]; then
+                  name=$(basename "$f" .txt)
+                  count=$(cat "$f")
+                  if [ "$first" = true ]; then
+                    first=false
+                  else
+                    echo ","
+                  fi
+                  echo "  {\"name\": \"$name\", \"count\": $count}"
+                fi
               done
-
-              git config --global user.name 'github-actions[bot]'
-              git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-              git add ${{ env.PROJECT_FILES_DIR }}/counters/*.txt
-              git commit -m "Manual save of counters"
-              git push
+              echo "]" > project_list.json
               ;;
+
           esac
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: ephemeral-counters
-          path: ${{ env.PROJECT_FILES_DIR }}/counters.json
+          # Commit changes if any files were modified
+          if [ -n "$(git status --porcelain)" ]; then
+            git config --global user.name 'github-actions[bot]'
+            git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+            git add ${{ env.PROJECT_FILES_DIR }}/counters/*.txt
+            git commit -m "Update counters"
+            git push
+          fi

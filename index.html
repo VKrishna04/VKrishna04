@@ -17,310 +17,354 @@
     </div>
     <div id="project-tiles-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
 
-    <script>
-        const username = '<your-username>';
-        const repo = '<your-repo>';
-        const token = '<your-personal-access-token>';
-        const projects = {};
+    <script type="module">
+        async function init() {
+            // Fetch repository variables from GitHub API
+            const response = await fetch('https://api.github.com/repos/VKrishna04/VKrishna04/actions/variables');
+            const variables = await response.json();
 
-        document.getElementById('add-project-button').addEventListener('click', () => {
-            const projectName = document.getElementById('project-name-input').value.trim();
-            if (projectName) {
-                addProject(projectName);
-                saveProjects();
-            } else {
-                alert('Please enter a project name.');
-            }
-        });
+            const username = variables.find(v => v.name === 'OWNER_NAME')?.value || 'VKrishna04';
+            const repo = variables.find(v => v.name === 'REPO_NAME')?.value || 'VKrishna04';
 
-        function loadProjects() {
-            // Load projects from GitHub artifact
-            fetch(`https://api.github.com/repos/${username}/${repo}/actions/artifacts`)
-                .then(response => response.json())
-                .then(data => {
-                    const artifact = data.artifacts.find(a => a.name === 'ephemeral-counters');
-                    if (artifact) {
-                        fetch(artifact.archive_download_url, {
-                            headers: {
-                                'Authorization': `token ${token}`
-                            }
-                        })
-                        .then(response => response.blob())
-                        .then(blob => {
-                            const reader = new FileReader();
-                            reader.onload = function() {
-                                const counters = JSON.parse(reader.result);
-                                Object.keys(counters).forEach(projectName => {
-                                    projects[projectName] = { count: counters[projectName] };
-                                    createProjectTile(projectName);
-                                });
-                            };
-                            reader.readAsText(blob);
-                        });
-                    }
-                })
-                .catch(error => {
-                    console.error('Error loading projects:', error);
-                });
-        }
-
-        function saveProjects() {
-            const counters = {};
-            Object.keys(projects).forEach(projectName => {
-                counters[projectName] = projects[projectName].count;
-            });
-
-            fetch(`https://api.github.com/repos/${username}/${repo}/actions/artifacts`, {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/vnd.github.v3+json',
-                    'Authorization': `token ${token}`,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    name: 'ephemeral-counters',
-                    files: {
-                        'counters.json': JSON.stringify(counters)
-                    }
-                })
-            })
-            .then(response => {
-                if (response.ok) {
-                    console.log('Projects saved successfully.');
+            const projects = {};
+            document.getElementById('add-project-button').addEventListener('click', () => {
+                const projectName = document.getElementById('project-name-input').value.trim();
+                if (projectName) {
+                    addProject(projectName);
                 } else {
-                    console.error('Error saving projects:', response.statusText);
+                    alert('Please enter a project name.');
                 }
-            })
-            .catch((error) => {
-                console.error('Error:', error);
             });
-        }
 
-        function addProject(projectName) {
-            // Update existing addProject function to use createProject
-            if (projects[projectName]) {
-                alert('Project already exists.');
-                return;
+            function loadProjects() {
+                // First try to get list from text files directly
+                fetchPublicData(`https://api.github.com/repos/${username}/${repo}/contents/${PROJECT_FILES_DIR}/counters`)
+                    .then(response => response.json())
+                    .then(files => {
+                        // Filter only .txt files and process them
+                        const projectFiles = files.filter(f => f.name.endsWith('.txt'));
+                        Promise.all(projectFiles.map(file =>
+                            fetchPublicData(`https://raw.githubusercontent.com/${username}/${repo}/main/${PROJECT_FILES_DIR}/counters/${file.name}`)
+                                .then(response => response.text())
+                                .then(count => ({
+                                    name: file.name.replace('.txt', ''),
+                                    count: parseInt(count.trim())
+                                }))
+                        )).then(projectList => {
+                            projectList.forEach(project => {
+                                projects[project.name] = { count: project.count };
+                                createProjectTile(project.name);
+                            });
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error loading projects:', error);
+                    });
             }
-            createProject(projectName);
-        }
 
-        function removeProject(projectName) {
-            delete projects[projectName];
-            document.getElementById(`tile-${projectName}`).remove();
-        }
+            function saveProjects() {
+                const counters = {};
+                Object.keys(projects).forEach(projectName => {
+                    counters[projectName] = projects[projectName].count;
+                });
 
-        function createProjectTile(projectName) {
-            const container = document.getElementById('project-tiles-container');
-            const tile = document.createElement('div');
-            tile.className = 'bg-white p-4 rounded shadow-md';
-            tile.id = `tile-${projectName}`;
-            tile.innerHTML = `
-                <h3 class="text-xl font-semibold mb-2">${projectName}</h3>
-                <p id="counter-${projectName}" class="mb-2">Counter: 0</p>
-                <p id="live-counter-${projectName}" class="text-sm text-gray-600 mb-2">Live Count: Loading...</p>
-                <button onclick="incrementCounter('${projectName}')" class="bg-green-500 text-white px-4 py-2 rounded mb-2">Increment Counter</button>
-                <button onclick="updateCounterPrompt('${projectName}')" class="bg-yellow-500 text-white px-4 py-2 rounded mb-2">Update Count</button>
-                <button onclick="renameProjectPrompt('${projectName}')" class="bg-purple-500 text-white px-4 py-2 rounded mb-2">Rename Project</button>
-                <button onclick="displayUrls('${projectName}')" class="bg-blue-500 text-white px-4 py-2 rounded mb-2">Get URLs</button>
-                <button onclick="deleteProject('${projectName}')" class="bg-red-500 text-white px-4 py-2 rounded">Delete Project</button>
-                <div id="urls-${projectName}" class="mt-2"></div>
-            `;
-            container.appendChild(tile);
-            updateCounterDisplay(projectName);
-            startLiveCounter(projectName);
-        }
+                fetchPublicData(`https://api.github.com/repos/${username}/${repo}/actions/artifacts`, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/vnd.github.v3+json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: 'ephemeral-counters',
+                        files: {
+                            'counters.json': JSON.stringify(counters)
+                        }
+                    })
+                })
+                .then(response => {
+                    if (response.ok) {
+                        console.log('Projects saved successfully.');
+                    } else {
+                        console.error('Error saving projects:', response.statusText);
+                    }
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+            }
 
-        function startLiveCounter(projectName) {
-            // Update live counter every 5 seconds
-            setInterval(() => {
-                fetch(`https://api.github.com/repos/${username}/${repo}/actions/artifacts`)
+            function addProject(projectName) {
+                if (projects[projectName]) {
+                    alert('Project already exists.');
+                    return;
+                }
+                createProject(projectName);
+            }
+
+            function removeProject(projectName) {
+                delete projects[projectName];
+                document.getElementById(`tile-${projectName}`).remove();
+            }
+
+            function createProjectTile(projectName) {
+                const container = document.getElementById('project-tiles-container');
+                const tile = document.createElement('div');
+                tile.className = 'bg-white p-4 rounded shadow-md';
+                tile.id = `tile-${projectName}`;
+                tile.innerHTML = `
+                    <h3 class="text-xl font-semibold mb-2">${projectName}</h3>
+                    <p id="counter-${projectName}" class="mb-2">Counter: 0</p>
+                    <p id="live-counter-${projectName}" class="text-sm text-gray-600 mb-2">Live Count: Loading...</p>
+                    <button onclick="incrementCounter('${projectName}')" class="bg-green-500 text-white px-4 py-2 rounded mb-2">Increment Counter</button>
+                    <button onclick="updateCounterPrompt('${projectName}')" class="bg-yellow-500 text-white px-4 py-2 rounded mb-2">Update Count</button>
+                    <button onclick="renameProjectPrompt('${projectName}')" class="bg-purple-500 text-white px-4 py-2 rounded mb-2">Rename Project</button>
+                    <button onclick="displayUrls('${projectName}')" class="bg-blue-500 text-white px-4 py-2 rounded mb-2">Get URLs</button>
+                    <button onclick="deleteProject('${projectName}')" class="bg-red-500 text-white px-4 py-2 rounded">Delete Project</button>
+                    <div id="urls-${projectName}" class="mt-2"></div>
+                `;
+                container.appendChild(tile);
+                updateCounterDisplay(projectName);
+                startLiveCounter(projectName);
+            }
+
+            function startLiveCounter(projectName) {
+                // Update live counter every 5 seconds
+                setInterval(() => {
+                    fetchPublicData(`https://api.github.com/repos/${username}/${repo}/actions/artifacts`)
+                        .then(response => response.json())
+                        .then(data => {
+                            const artifact = data.artifacts.find(a => a.name === 'ephemeral-counters');
+                            if (artifact) {
+                                return fetchPublicData(artifact.archive_download_url);
+                            }
+                            throw new Error('No artifact found');
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            const count = data[projectName] || 0;
+                            document.getElementById(`live-counter-${projectName}`).innerText = `Live Count: ${count}`;
+                        })
+                        .catch(() => {
+                            fetchPublicData(`https://api.github.com/repos/${username}/${repo}/contents/project-files/counters/${projectName}.txt`)
+                                .then(response => response.json())
+                                .then(data => {
+                                    const content = atob(data.content);
+                                    document.getElementById(`live-counter-${projectName}`).innerText = `Live Count: ${content}`;
+                                })
+                                .catch(error => {
+                                    document.getElementById(`live-counter-${projectName}`).innerText = 'Live count unavailable';
+                                });
+                        });
+                }, 5000);
+            }
+
+            function incrementCounter(projectName) {
+                fetchPublicData(`https://api.github.com/repos/${username}/${repo}/dispatches`, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/vnd.github.v3+json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        event_type: 'increment-counter',
+                        client_payload: {
+                            project_name: projectName,
+                            action: 'increment'
+                        }
+                    })
+                })
+                .then(response => {
+                    if (response.ok) {
+                        setTimeout(updateCounterDisplay, 5000, projectName); // Wait 5s for workflow to process
+                    } else {
+                        console.error('Error:', response.statusText);
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+            }
+
+            function updateCounterPrompt(projectName) {
+                const newCount = prompt('Enter the new count value:');
+                if (newCount !== null) {
+                    updateCounter(projectName, newCount);
+                }
+            }
+
+            function updateCounter(projectName, newCount) {
+                fetchPublicData(`https://api.github.com/repos/${username}/${repo}/dispatches`, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/vnd.github.v3+json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        event_type: 'increment-counter',
+                        client_payload: {
+                            project_name: projectName,
+                            action: 'update',
+                            new_count: parseInt(newCount)
+                        }
+                    })
+                })
+                .then(response => {
+                    if (response.ok) {
+                        setTimeout(updateCounterDisplay, 5000, projectName); // Wait 5s for workflow to process
+                    } else {
+                        console.error('Error:', response.statusText);
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+            }
+
+            function updateCounterDisplay(projectName) {
+                // First try artifacts
+                fetchPublicData(`https://api.github.com/repos/${username}/${repo}/actions/artifacts`)
                     .then(response => response.json())
                     .then(data => {
                         const artifact = data.artifacts.find(a => a.name === 'ephemeral-counters');
                         if (artifact) {
-                            return fetch(artifact.archive_download_url, {
-                                headers: { 'Authorization': `token ${token}` }
-                            });
+                            return fetchPublicData(artifact.archive_download_url);
                         }
                         throw new Error('No artifact found');
                     })
                     .then(response => response.json())
                     .then(data => {
                         const count = data[projectName] || 0;
-                        document.getElementById(`live-counter-${projectName}`).innerText = `Live Count: ${count}`;
+                        document.getElementById(`counter-${projectName}`).innerText = `Counter: ${count}`;
                     })
                     .catch(() => {
-                        fetch(`https://api.github.com/repos/${username}/${repo}/contents/project-files/counters/${projectName}.txt`)
+                        // Fallback to repository contents if artifact fails
+                        fetchPublicData(`https://api.github.com/repos/${username}/${repo}/contents/project-files/counters/${projectName}.txt`)
                             .then(response => response.json())
                             .then(data => {
                                 const content = atob(data.content);
-                                document.getElementById(`live-counter-${projectName}`).innerText = `Live Count: ${content}`;
+                                document.getElementById(`counter-${projectName}`).innerText = `Counter: ${content}`;
                             })
                             .catch(error => {
-                                document.getElementById(`live-counter-${projectName}`).innerText = 'Live count unavailable';
+                                document.getElementById(`counter-${projectName}`).innerText = 'Counter not available';
                             });
                     });
-            }, 5000);
-        }
+            }
 
-        function incrementCounter(projectName) {
-            fetch(`https://api.github.com/repos/${username}/${repo}/dispatches`, {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/vnd.github.v3+json',
-                    'Authorization': `token ${token}`,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
+            function displayUrls(projectName) {
+                const viewUrl = `https://raw.githubusercontent.com/${username}/${repo}/main/${PROJECT_FILES_DIR}/counters/${projectName}.txt`;
+                const incrementUrl = `https://api.github.com/repos/${username}/${repo}/dispatches`;
+                const incrementBody = JSON.stringify({
                     event_type: 'increment-counter',
                     client_payload: {
                         project_name: projectName,
                         action: 'increment'
                     }
-                })
-            })
-            .then(response => {
-                if (response.ok) {
-                    setTimeout(updateCounterDisplay, 5000, projectName); // Wait 5s for workflow to process
-                } else {
-                    console.error('Error:', response.statusText);
-                }
-            })
-            .catch(error => console.error('Error:', error));
-        }
+                }, null, 2);
 
-        function updateCounterPrompt(projectName) {
-            const newCount = prompt('Enter the new count value:');
-            if (newCount !== null) {
-                updateCounter(projectName, newCount);
+                document.getElementById(`urls-${projectName}`).innerHTML = `
+                    <p>View URL: <a href="${viewUrl}" target="_blank" class="text-blue-500">${viewUrl}</a></p>
+                    <button onclick="copyToClipboard('${viewUrl}')" class="bg-gray-500 text-white px-4 py-2 rounded mb-2">Copy View URL</button>
+                    <p>Increment URL: ${incrementUrl}</p>
+                    <p>POST Body:</p>
+                    <pre class="bg-gray-100 p-2 rounded mb-2">${incrementBody}</pre>
+                    <button onclick="copyToClipboard('${incrementUrl}')" class="bg-gray-500 text-white px-4 py-2 rounded">Copy Increment URL</button>
+                    <button onclick="copyToClipboard('${incrementBody}')" class="bg-gray-500 text-white px-4 py-2 rounded ml-2">Copy POST Body</button>
+                `;
             }
-        }
 
-        function updateCounter(projectName, newCount) {
-            fetch(`https://api.github.com/repos/${username}/${repo}/dispatches`, {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/vnd.github.v3+json',
-                    'Authorization': `token ${token}`,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    event_type: 'increment-counter',
-                    client_payload: {
-                        project_name: projectName,
-                        action: 'update',
-                        new_count: parseInt(newCount)
-                    }
-                })
-            })
-            .then(response => {
-                if (response.ok) {
-                    setTimeout(updateCounterDisplay, 5000, projectName); // Wait 5s for workflow to process
-                } else {
-                    console.error('Error:', response.statusText);
-                }
-            })
-            .catch(error => console.error('Error:', error));
-        }
-
-        function updateCounterDisplay(projectName) {
-            // First try artifacts
-            fetch(`https://api.github.com/repos/${username}/${repo}/actions/artifacts`)
-                .then(response => response.json())
-                .then(data => {
-                    const artifact = data.artifacts.find(a => a.name === 'ephemeral-counters');
-                    if (artifact) {
-                        return fetch(artifact.archive_download_url, {
-                            headers: { 'Authorization': `token ${token}` }
-                        });
-                    }
-                    throw new Error('No artifact found');
-                })
-                .then(response => response.json())
-                .then(data => {
-                    const count = data[projectName] || 0;
-                    document.getElementById(`counter-${projectName}`).innerText = `Counter: ${count}`;
-                })
-                .catch(() => {
-                    // Fallback to repository contents if artifact fails
-                    fetch(`https://api.github.com/repos/${username}/${repo}/contents/project-files/counters/${projectName}.txt`)
-                        .then(response => response.json())
-                        .then(data => {
-                            const content = atob(data.content);
-                            document.getElementById(`counter-${projectName}`).innerText = `Counter: ${content}`;
-                        })
-                        .catch(error => {
-                            document.getElementById(`counter-${projectName}`).innerText = 'Counter not available';
-                        });
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    alert('URL copied to clipboard');
+                }).catch(err => {
+                    console.error('Error copying to clipboard', err);
                 });
-        }
-
-        function displayUrls(projectName) {
-            const viewUrl = `https://raw.githubusercontent.com/${username}/${repo}/main/project-files/counters/${projectName}.txt`;
-            const incrementUrl = `https://api.github.com/repos/${username}/${repo}/dispatches`;
-
-            document.getElementById(`urls-${projectName}`).innerHTML = `
-                <p>View URL: <a href="${viewUrl}" target="_blank" class="text-blue-500">${viewUrl}</a></p>
-                <p>Increment URL: ${incrementUrl}</p>
-                <button onclick="copyToClipboard('${viewUrl}')" class="bg-gray-500 text-white px-4 py-2 rounded mb-2">Copy View URL</button>
-                <button onclick="copyToClipboard('${incrementUrl}')" class="bg-gray-500 text-white px-4 py-2 rounded">Copy Increment URL</button>
-            `;
-        }
-
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                alert('URL copied to clipboard');
-            }).catch(err => {
-                console.error('Error copying to clipboard', err);
-            });
-        }
-
-        function renameProjectPrompt(projectName) {
-            const newName = prompt('Enter new project name:');
-            if (newName && newName !== projectName) {
-                renameProject(projectName, newName);
             }
-        }
 
-        function renameProject(oldName, newName) {
-            fetch(`https://api.github.com/repos/${username}/${repo}/dispatches`, {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/vnd.github.v3+json',
-                    'Authorization': `token ${token}`,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    event_type: 'rename-project',
-                    client_payload: {
-                        project_name: oldName,
-                        new_name: newName
-                    }
-                })
-            })
-            .then(response => {
-                if (response.ok) {
-                    delete projects[oldName];
-                    projects[newName] = { count: projects[oldName].count };
-                    document.getElementById(`tile-${oldName}`).remove();
-                    createProjectTile(newName);
+            function renameProjectPrompt(projectName) {
+                const newName = prompt('Enter new project name:');
+                if (newName && newName !== projectName) {
+                    renameProject(projectName, newName);
                 }
-            })
-            .catch(error => console.error('Error:', error));
-        }
+            }
 
-        function deleteProject(projectName) {
-            if (confirm(`Are you sure you want to delete ${projectName}?`)) {
-                fetch(`https://api.github.com/repos/${username}/${repo}/dispatches`, {
+            function renameProject(oldName, newName) {
+                fetchPublicData(`https://api.github.com/repos/${username}/${repo}/dispatches`, {
                     method: 'POST',
                     headers: {
                         'Accept': 'application/vnd.github.v3+json',
-                        'Authorization': `token ${token}`,
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        event_type: 'delete-project',
+                        event_type: 'rename-project',
+                        client_payload: {
+                            project_name: oldName,
+                            new_name: newName
+                        }
+                    })
+                })
+                .then(response => {
+                    if (response.ok) {
+                        projects[newName] = { count: projects[oldName].count };
+                        delete projects[oldName];
+                        document.getElementById(`tile-${oldName}`).remove();
+                        createProjectTile(newName);
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+            }
+
+            function deleteProject(projectName) {
+                if (confirm(`Are you sure you want to delete ${projectName}?`)) {
+                    fetchPublicData(`https://api.github.com/repos/${username}/${repo}/dispatches`, {
+                        method: 'POST',
+                        headers: {
+                            'Accept': 'application/vnd.github.v3+json',
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            event_type: 'delete-project',
+                            client_payload: {
+                                project_name: projectName
+                            }
+                        })
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            delete projects[projectName];
+                            document.getElementById(`tile-${projectName}`).remove();
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+                }
+            }
+
+            function bulkUpdateProjects(projectsData) {
+                fetchPublicData(`https://api.github.com/repos/${username}/${repo}/dispatches`, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/vnd.github.v3+json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        event_type: 'bulk-update',
+                        client_payload: {
+                            bulk_data: projectsData
+                        }
+                    })
+                })
+                .then(response => {
+                    if (response.ok) {
+                        setTimeout(loadProjects, 5000); // Reload all projects after update
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+            }
+
+            function createProject(projectName) {
+                fetchPublicData(`https://api.github.com/repos/${username}/${repo}/dispatches`, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/vnd.github.v3+json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        event_type: 'create-project',
                         client_payload: {
                             project_name: projectName
                         }
@@ -328,87 +372,41 @@
                 })
                 .then(response => {
                     if (response.ok) {
-                        delete projects[projectName];
-                        document.getElementById(`tile-${projectName}`).remove();
+                        addProject(projectName);
+                        setTimeout(updateCounterDisplay, 5000, projectName);
                     }
                 })
                 .catch(error => console.error('Error:', error));
             }
-        }
 
-        function bulkUpdateProjects(projectsData) {
-            fetch(`https://api.github.com/repos/${username}/${repo}/dispatches`, {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/vnd.github.v3+json',
-                    'Authorization': `token ${token}`,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    event_type: 'bulk-update',
-                    client_payload: {
-                        bulk_data: projectsData
+            function saveAllArtifacts() {
+                fetchPublicData(`https://api.github.com/repos/${username}/${repo}/dispatches`, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/vnd.github.v3+json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        event_type: 'save-artifacts',
+                        client_payload: {
+                            manual_trigger: true
+                        }
+                    })
+                })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Saving all counters. This may take a few minutes.');
+                        setTimeout(loadProjects, 10000); // Reload after 10s
                     }
                 })
-            })
-            .then(response => {
-                if (response.ok) {
-                    setTimeout(loadProjects, 5000); // Reload all projects after update
-                }
-            })
-            .catch(error => console.error('Error:', error));
+                .catch(error => console.error('Error:', error));
+            }
+
+            // Load projects on page load
+            loadProjects();
         }
 
-        function createProject(projectName) {
-            fetch(`https://api.github.com/repos/${username}/${repo}/dispatches`, {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/vnd.github.v3+json',
-                    'Authorization': `token ${token}`,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    event_type: 'create-project',
-                    client_payload: {
-                        project_name: projectName
-                    }
-                })
-            })
-            .then(response => {
-                if (response.ok) {
-                    addProject(projectName);
-                    setTimeout(updateCounterDisplay, 5000, projectName);
-                }
-            })
-            .catch(error => console.error('Error:', error));
-        }
-
-        function saveAllArtifacts() {
-            fetch(`https://api.github.com/repos/${username}/${repo}/dispatches`, {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/vnd.github.v3+json',
-                    'Authorization': `token ${token}`,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    event_type: 'save-artifacts',
-                    client_payload: {
-                        manual_trigger: true
-                    }
-                })
-            })
-            .then(response => {
-                if (response.ok) {
-                    alert('Saving all counters. This may take a few minutes.');
-                    setTimeout(loadProjects, 10000); // Reload after 10s
-                }
-            })
-            .catch(error => console.error('Error:', error));
-        }
-
-        // Load projects on page load
-        loadProjects();
+        init();
     </script>
 </body>
 </html>

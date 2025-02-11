@@ -7,7 +7,7 @@ on:
     - cron: '0 0 1 */2 *'  # Run every 2 months
 
 env:
-  PROJECT_FILES_DIR: project-files
+  PROJECT_FILES_DIR: ${{ vars.PROJECT_DIR }}
 
 jobs:
   save-artifacts:
@@ -22,6 +22,13 @@ jobs:
         with:
           name: ephemeral-counters
           path: ${{ env.PROJECT_FILES_DIR }}
+
+      - name: Ensure ephemeral-counters artifact if missing
+        run: |
+          if [ ! -f ${{ env.PROJECT_FILES_DIR }}/counters.json ]; then
+            echo "{}" > ${{ env.PROJECT_FILES_DIR }}/counters.json
+            mkdir -p ${{ env.PROJECT_FILES_DIR }}/counters
+          fi
 
       - name: Save Counters
         run: |
