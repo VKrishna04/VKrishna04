@@ -1,0 +1,7 @@
+{
+	"event_type": "increment-counter",
+	"client_payload": {
+		"project_name": "Time Table Generator",
+		"new_count": 1
+	}
+}

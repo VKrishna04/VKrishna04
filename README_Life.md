@@ -1,60 +1,64 @@
 <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=250&color=gradient&text=Krishna%20GSVV&section=header&reversal=false&textBg=false&animation=fadeIn&fontAlignY=60&desc=Software%20Engineer%20%7C%20Life%20Experimentalist%20Founder&descAlignY=85&descSize=20"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=250&color=gradient&text=Life%20Experimentalist&section=header&reversal=false&textBg=false&animation=fadeIn&fontAlignY=60&desc=Where%20Ideas%20Meet%20Innovation&descAlignY=85&descSize=20"/>
 </p>
 
-<h1 align="center">👋 Welcome to my Digital Universe!</h1>
+<h1 align="center">🧪 Welcome to Life Experimentalist 🚀</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=22&pause=1000&color=36BCF7&center=true&vCenter=true&width=600&lines=Software+Development+Engineer;Backend+Development+Enthusiast;Cloud+Computing+Explorer;Full+Stack+Developer;Life+Experimentalist+Founder;Always+Learning%2C+Always+Building" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=22&pause=1000&color=36BCF7&center=true&vCenter=true&width=600&lines=Experimenting+with+Code+%26+Life;Building+Tomorrow's+Solutions+Today;Where+Innovation+Meets+Implementation" alt="Typing SVG" />
 </p>
 
 <div align="center">
-  <a href="https://github.com/Life-Experimentalist">
-    <img src="https://img.shields.io/badge/🧪_Life_Experimentalist-Organization-blue?style=for-the-badge&logo=github" alt="Life Experimentalist Org"/>
-  </a>
-  <img src="https://img.shields.io/badge/Status-Experimenting-brightgreen?style=for-the-badge" alt="Status"/>
-  <img src="https://img.shields.io/badge/Location-Visakhapatnam%2C%20India-orange?style=for-the-badge" alt="Location"/>
+  <img src="https://img.shields.io/badge/Organization-Life%20Experimentalist-blue?style=for-the-badge&logo=github" alt="Organization Badge"/>
+  <img src="https://img.shields.io/badge/Founded-2025-green?style=for-the-badge" alt="Founded Badge"/>
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" alt="Status Badge"/>
 </div>
 
 ---
 
-<h2 align="center">🌐 Let's Connect and Chat!</h2>
+## 🎯 Our Mission
+
+> *"Every experiment teaches us something new. Every line of code brings us closer to innovation."*
+
+**Life Experimentalist** is more than just a GitHub organization—it's a hub for transformative projects that bridge the gap between experimental ideas and real-world solutions. We believe in learning through experimentation, building through iteration, and growing through collaboration.
+
+---
+
+<h2 align="center">🌐 Connect with the Founder</h2>
 
 <div align="center">
 <p>
-<a href="https://x.com/krishnagsvv"> <img src="https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white" alt = "X"></a>
-<a href="https://www.linkedin.com/in/krishnagsvv"> <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt = "LinkedIn"></a>
-<a href="https://vkrishna04.github.io"> <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt = "GitHub"></a>
-<a href="https://dev.to/vkrishna04"> <img src="https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white" alt = "Dev.to blog"></a>
+<a href="https://x.com/krishnagsvv"> <img src="https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white" alt="X"></a>
+<a href="https://www.linkedin.com/in/krishnagsvv"> <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+<a href="https://vkrishna04.github.io"> <img src="https://img.shields.io/badge/Portfolio-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="Portfolio"></a>
+<a href="https://dev.to/vkrishna04"> <img src="https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white" alt="Dev.to blog"></a>
 </p>
 <p>
-<a href="mailto:krishnagsvv@gmail.com"> <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt = "Gmail"></a>
-<a href="https://www.instagram.com/vkrishna_04"> <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" alt = "Instagram"></a>
-<a href="https://in.pinterest.com/VKrishna04/"> <img src="https://img.shields.io/badge/Pinterest-%23E60023.svg?style=for-the-badge&logo=Pinterest&logoColor=white" alt = "Pinterest"></a>
-<a href="https://www.reddit.com/user/Krishnalsh04/"> <img src="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white" alt = "Reddit"></a>
+<a href="mailto:krishnagsvv@gmail.com"> <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"></a>
+<a href="https://www.instagram.com/vkrishna_04"> <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" alt="Instagram"></a>
+<a href="https://in.pinterest.com/VKrishna04/"> <img src="https://img.shields.io/badge/Pinterest-%23E60023.svg?style=for-the-badge&logo=Pinterest&logoColor=white" alt="Pinterest"></a>
+<a href="https://www.reddit.com/user/Krishnalsh04/"> <img src="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white" alt="Reddit"></a>
 </p>
 </div>
 
+---
+
 <div align="center">
-    <img src="https://capsule-render.vercel.app/api?type=venom&height=250&color=gradient&text=👨🏻‍💻%20About%20Me&animation=fadeIn" alt="About Me">
+    <img src="https://capsule-render.vercel.app/api?type=venom&height=250&color=gradient&text=👨🏻‍💻%20Meet%20the%20Founder&animation=fadeIn" alt="Meet the Founder">
 </div>
 
 <div align="center">
 
 ## 🧑‍💻 Krishna GSVV - The Experimentalist
 
-> *"Every experiment teaches us something new. Every line of code brings us closer to innovation."*
-
-### 🚀 Founder of [Life Experimentalist](https://github.com/Life-Experimentalist) Organization
-
 </div>
 
 ```json
 {
     "name": "Krishna GSVV",
-    "role": "Software Development Engineer & Organization Founder",
+    "role": "Founder & Lead Developer",
     "organization": "Life Experimentalist",
     "description": "A passionate learner and tech enthusiast developer from India who loves to explore new technologies and frameworks through practical experimentation.",
     "located_in": "Visakhapatnam, India",
@@ -84,11 +88,11 @@
         "React Native Development",
         "Microservices Architecture"
     ],
-    "2025_goals": [
-        "Launch 10+ innovative projects through Life Experimentalist",
+    "2025_organization_goals": [
+        "Launch 10+ innovative projects",
         "Explore 5-7 cutting-edge technologies",
         "Build a community of experimentalists",
-        "Contribute to open source projects"
+        "Open source contributions"
     ],
     "personal_interests": ["Novels", "Cinema", "Comedy", "Anime", "Outdoor Games"],
     "tech_arsenal": {
@@ -103,7 +107,7 @@
 
 ---
 
-<h2 align="center">🛠️ Technology Stack & Tools</h2>
+<h2 align="center">🛠️ Our Technology Stack</h2>
 
 <div align="center">
 
@@ -157,16 +161,148 @@
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/playwright/playwright-original.svg" alt="playwright" width="50" height="50" />
 </p>
 
-### Additional Tools
-<p>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows11/windows11-original.svg" alt="windows 11" width="50" height="50" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="linux" width="50" height="50"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/latex/latex-original.svg" alt="latex" width="50" height="50" style="filter: invert(1);"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="bash" width="50" height="50" style="filter: invert(1);"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/powershell/powershell-original.svg" alt="powershell" width="50" height="50" style="filter: invert(1);"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/markdown/markdown-original.svg" alt="markdown" width="50" height="50" style="filter: invert(1);"/>
-</p>
+</div>
 
+---
+
+<h2 align="center">🚀 Featured Projects</h2>
+
+<div align="center">
+
+> *"Every experiment teaches us something new. Every line of code brings us closer to innovation."*
+
+Explore our collection of innovative projects spanning AI, web development, and developer tools.
+
+</div>
+
+<div align="center">
+<table>
+<tr>
+<td align="center" width="50%">
+
+### 🤖 AI & Machine Learning
+[![SignLanguageDetector](https://img.shields.io/badge/🤟_Sign_Language_Detector-Python-blue?style=for-the-badge)](https://github.com/Life-Experimentalist/SignLanguageDetector)
+![Stars](https://img.shields.io/github/stars/Life-Experimentalist/SignLanguageDetector?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
+
+Real-time ISL 🇮🇳 recognition system using OpenCV, MediaPipe, and Flask. Bridges communication gaps with AI-powered gesture recognition.
+
+---
+
+[![RanobeGemini](https://img.shields.io/badge/📚_Ranobe_Gemini-JavaScript-yellow?style=for-the-badge)](https://github.com/Life-Experimentalist/RanobeGemini)
+![Stars](https://img.shields.io/github/stars/Life-Experimentalist/RanobeGemini?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
+
+Browser extension enhancing web novel translations using Google's Gemini AI. One-click transformation of poorly translated content.
+
+</td>
+<td align="center" width="50%">
+
+### 🌐 Web Development
+[![HiveXplore](https://img.shields.io/badge/🐝_Hive_Xplore-Python-green?style=for-the-badge)](https://github.com/Life-Experimentalist/HiveXplore)
+![Stars](https://img.shields.io/github/stars/Life-Experimentalist/HiveXplore?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
+
+Beginner-friendly Hive blockchain app introducing decentralized social media without technical barriers. Simplified Web3 experience.
+
+---
+
+[![eVidya](https://img.shields.io/badge/📖_eVidya-JavaScript-orange?style=for-the-badge)](https://github.com/Life-Experimentalist/eVidya)
+![Stars](https://img.shields.io/github/stars/Life-Experimentalist/eVidya?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
+
+Interactive tech learning platform with progress tracking, video lessons, and quizzes. Self-paced education for programming languages.
+
+</td>
+</tr>
+<tr>
+<td align="center" colspan="2">
+
+### 🛠️ Developer Tools & Extensions
+[![cspell-sync](https://img.shields.io/badge/📝_cspell--sync-TypeScript-blue?style=for-the-badge)](https://github.com/Life-Experimentalist/cspell-sync)
+![Stars](https://img.shields.io/github/stars/Life-Experimentalist/cspell-sync?style=flat-square)
+[![Global-Save-State](https://img.shields.io/badge/💾_Global_Save_State-TypeScript-purple?style=for-the-badge)](https://github.com/Life-Experimentalist/Global-Save-State)
+![Stars](https://img.shields.io/github/stars/Life-Experimentalist/Global-Save-State?style=flat-square)
+
+VS Code extensions for enhanced development workflow - spell checking synchronization and project save state management.
+
+</td>
+</tr>
+</table>
+</div>
+
+---
+
+<h2 align="center">🤝 How to Contribute</h2>
+
+<div align="center">
+
+We welcome contributions from fellow experimentalists! Here's how you can get involved:
+
+</div>
+
+<div align="center">
+<table>
+<tr>
+<td align="center" width="33%">
+
+### 🍴 Fork & Contribute
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+</td>
+<td align="center" width="33%">
+
+### 🐛 Report Issues
+Found a bug or have a suggestion?
+- Open an issue on GitHub
+- Provide detailed descriptions
+- Include reproduction steps
+
+</td>
+<td align="center" width="33%">
+
+### 💡 Share Ideas
+Have an innovative project idea?
+- Start a discussion
+- Collaborate on new experiments
+- Join our learning journey
+
+</td>
+</tr>
+</table>
+</div>
+
+<div align="center">
+
+[![Contribute Now](https://img.shields.io/badge/Start_Contributing-Choose_Project-brightgreen?style=for-the-badge&logo=github)](https://github.com/Life-Experimentalist)
+
+</div>
+
+---
+
+<h2 align="center">📊 Organization Statistics</h2>
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://img.shields.io/badge/Total_Repositories-6+-blue?style=for-the-badge&logo=github" alt="Total Repos"/>
+      </td>
+      <td align="center">
+        <img src="https://img.shields.io/badge/Languages-5+-green?style=for-the-badge&logo=code" alt="Languages"/>
+      </td>
+      <td align="center">
+        <img src="https://img.shields.io/badge/Active_Projects-6-orange?style=for-the-badge&logo=rocket" alt="Active Projects"/>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=vkrishna04&theme=radical&hide_border=true&layout=compact&langs_count=10" alt="Languages Used" />
 </div>
 
 ---
@@ -183,14 +319,10 @@
 	<a href="https://vkrishna04.github.io/"><img src="https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white" alt="Github Pages"></a>
 	<a href=""><img src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel"></a>
 	<a href=""><img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS"></a>
-	<a href="https://www.heroku.com/"><img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" alt="Heroku"></a>
-  	<img src="https://komarev.com/ghpvc/?username=vkrishna04&color=blue&style=flat" alt="Profile Views"/>
 </p>
 <p>
 	<a href=""><img src="https://img.shields.io/badge/github_copilot-8957E5?style=for-the-badge&logo=github-copilot&logoColor=white" alt="GitHub Copilot"></a>
 	<a href=""><img src="https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white" alt="ChatGPT"></a>
-	<a href="https://open.spotify.com/user/drz1bknr8dy7yo88gwzi9nl3d?si=86da6e56d31d4ea0"><img src="https://img.shields.io/badge/Spotify-1ED760?style=for-the-badge&logo=spotify&logoColor=white" alt="Spotify"></a>
-	<a href="https://music.youtube.com/channel/UCh918uhzsqX-D32Etxq61eQ?si=Uvyy7e6Pg0Ye7BSK"><img src="https://img.shields.io/badge/YouTube_Music-FF0000?style=for-the-badge&logo=youtube-music&logoColor=white" alt="YouTube Music"></a>
 </p>
 </div>
 
@@ -204,7 +336,7 @@
 
 ---
 
-<h2 align="center">📊 GitHub Analytics</h2>
+<h2 align="center">📊 Organization Analytics</h2>
 
 <div align="center">
   <table>
@@ -268,120 +400,6 @@
 
 ---
 
-<h2 align="center">🚀 Featured Projects</h2>
-
-<div align="center">
-
-> *"Code is poetry, and every project tells a story of learning and growth."*
-
-[![Life Experimentalist](https://img.shields.io/badge/🧪_All_Projects-Life_Experimentalist-blue?style=for-the-badge&logo=github)](https://github.com/Life-Experimentalist)
-
-Here are some of my favorite projects that showcase different aspects of my development journey:
-
-</div>
-
-<div align="center">
-<table>
-<tr>
-<td align="center" width="50%">
-
-### 🤖 AI & Machine Learning
-[![SignLanguageDetector](https://img.shields.io/badge/🤟_Sign_Language_Detector-Python-blue?style=for-the-badge)](https://github.com/Life-Experimentalist/SignLanguageDetector)
-
-Real-time ISL 🇮🇳 recognition system using OpenCV, MediaPipe, and Flask. Bridges communication gaps with AI-powered gesture recognition.
-
----
-
-[![RanobeGemini](https://img.shields.io/badge/📚_Ranobe_Gemini-JavaScript-yellow?style=for-the-badge)](https://github.com/Life-Experimentalist/RanobeGemini)
-
-Browser extension enhancing web novel translations using Google's Gemini AI. One-click transformation of poorly translated content.
-
-</td>
-<td align="center" width="50%">
-
-### 🌐 Web Development
-[![HiveXplore](https://img.shields.io/badge/🐝_Hive_Xplore-Python-green?style=for-the-badge)](https://github.com/Life-Experimentalist/HiveXplore)
-
-Beginner-friendly Hive blockchain app introducing decentralized social media without technical barriers. Simplified Web3 experience.
-
----
-
-[![eVidya](https://img.shields.io/badge/📖_eVidya-JavaScript-orange?style=for-the-badge)](https://github.com/Life-Experimentalist/eVidya)
-
-Interactive tech learning platform with progress tracking, video lessons, and quizzes. Self-paced education for programming languages.
-
-</td>
-</tr>
-<tr>
-<td align="center" colspan="2">
-
-### 🛠️ Developer Tools & Extensions
-[![cspell-sync](https://img.shields.io/badge/📝_cspell--sync-TypeScript-blue?style=for-the-badge)](https://github.com/Life-Experimentalist/cspell-sync) [![Global-Save-State](https://img.shields.io/badge/💾_Global_Save_State-TypeScript-purple?style=for-the-badge)](https://github.com/Life-Experimentalist/Global-Save-State)
-
-VS Code extensions for enhanced development workflow - spell checking synchronization and project save state management.
-
-</td>
-</tr>
-</table>
-</div>
-
-<div align="center">
-
-[![Explore More](https://img.shields.io/badge/🔍_Explore_All_Projects-Visit_Repository-brightgreen?style=for-the-badge&logo=github)](https://github.com/Life-Experimentalist)
-
-*Each project represents a different experiment in technology and problem-solving. Feel free to explore, fork, or contribute!*
-
-</div>
-
----
-
-<h2 align="center">🛣️ What's Next?</h2>
-
-<div align="center">
-<table>
-<tr>
-<td align="center" width="50%">
-
-### 🔮 2025 Roadmap
-- **AI-Powered Tools** - Building smarter automation
-- **Mobile Development** - React Native applications
-- **Cloud Architecture** - Scalable microservices
-- **Open Source** - More community contributions
-
-</td>
-<td align="center" width="50%">
-
-### 🎯 Current Goals
-- **10+ Projects** through Life Experimentalist
-- **Community Building** around experimentation
-- **Technical Writing** and documentation
-- **Mentorship** for aspiring developers
-
-</td>
-</tr>
-</table>
-</div>
-
----
-
-<h2 align="center">📞 Support & Contact</h2>
-
-<div align="center">
-
-**Need help with any project?** I'm always happy to help!
-
-📧 **Email:** [krishnagsvv@gmail.com](mailto:krishnagsvv@gmail.com)
-💬 **LinkedIn:** [Connect with me](https://www.linkedin.com/in/krishnagsvv)
-🐦 **X/Twitter:** [@krishnagsvv](https://x.com/krishnagsvv)
-
-**Project Issues?** Feel free to open an issue on any repository or reach out directly!
-
-[![Get Support](https://img.shields.io/badge/Get_Support-Contact_Me-blue?style=for-the-badge&logo=question)](mailto:krishnagsvv@gmail.com)
-
-</div>
-
----
-
 <h2 align="center">💡 Daily Inspiration</h2>
 
 <div align="center">
@@ -394,15 +412,14 @@ VS Code extensions for enhanced development workflow - spell checking synchroniz
 
 <div align="center">
 
-Always open to interesting conversations and collaboration opportunities!
+We're always looking for fellow experimentalists who share our passion for innovation!
 
-**Get in touch if you're interested in:**
-- 🚀 Collaborative projects
-- 💡 Tech discussions
-- 🧪 Experimental development
-- 🌟 Open source contributions
-
-[![Let's Connect](https://img.shields.io/badge/Let's_Connect-Reach_Out-blue?style=for-the-badge&logo=handshake)](mailto:krishnagsvv@gmail.com)
+**Interested in contributing?** Check out our repositories and feel free to:
+- 🍴 Fork our projects
+- 🐛 Report issues
+- 💡 Suggest new features
+- 🔄 Submit pull requests
+- ⭐ Star repositories you find interesting
 
 </div>
 
@@ -414,3 +431,4 @@ Always open to interesting conversations and collaboration opportunities!
 
 <div align="center">
   <sub>Built with ❤️ by <a href="https://github.com/VKrishna04">Krishna GSVV</a> • <a href="https://github.com/Life-Experimentalist">Life Experimentalist</a></sub>
+</div>
