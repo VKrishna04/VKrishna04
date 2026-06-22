@@ -1,17 +1,20 @@
 <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=250&color=gradient&text=Life%20Experimentalist&section=header&reversal=false&textBg=false&animation=fadeIn&fontAlignY=60&desc=Where%20Ideas%20Meet%20Innovation&descAlignY=85&descSize=20"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=250&color=gradient&customColorList=12,15&text=Life%20Experimentalist&section=header&reversal=false&textBg=false&animation=fadeIn&fontAlignY=60&desc=Where%20Ideas%20Meet%20Innovation&descAlignY=85&descSize=20"/>
 </p>
 
 <h1 align="center">🧪 Welcome to Life Experimentalist 🚀</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=22&pause=1000&color=36BCF7&center=true&vCenter=true&width=600&lines=Experimenting+with+Code+%26+Life;Building+Tomorrow's+Solutions+Today;Where+Innovation+Meets+Implementation" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=22&pause=1000&color=a855f7&center=true&vCenter=true&width=600&lines=Experimenting+with+Code+%26+Life;Building+Tomorrow's+Solutions+Today;Where+Innovation+Meets+Implementation" alt="Typing SVG" />
+</p>
+
+<p align="center">
+  <img src="https://counter.vkrishna04.me/api/views/Life-Experimentalist/badge?color=a855f7" alt="Organization Views"/>
 </p>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Organization-Life%20Experimentalist-blue?style=for-the-badge&logo=github" alt="Organization Badge"/>
   <img src="https://img.shields.io/badge/Founded-2025-green?style=for-the-badge" alt="Founded Badge"/>
   <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" alt="Status Badge"/>
 </div>
@@ -22,412 +25,194 @@
 
 > *"Every experiment teaches us something new. Every line of code brings us closer to innovation."*
 
-**Life Experimentalist** is more than just a GitHub organization—it's a hub for transformative projects that bridge the gap between experimental ideas and real-world solutions. We believe in learning through experimentation, building through iteration, and growing through collaboration.
+**Life Experimentalist** is a central hub for projects that bridge the gap between experimental concepts and real-world software solutions. We believe in learning through execution, building through iterative releases, and growing through collaboration.
 
 ---
 
 <h2 align="center">🌐 Connect with the Founder</h2>
 
-<div align="center">
-<p>
-<a href="https://x.com/krishnagsvv"> <img src="https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white" alt="X"></a>
-<a href="https://www.linkedin.com/in/krishnagsvv"> <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-<a href="https://vkrishna04.github.io"> <img src="https://img.shields.io/badge/Portfolio-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="Portfolio"></a>
-<a href="https://dev.to/vkrishna04"> <img src="https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white" alt="Dev.to blog"></a>
+<p align="center">
+  <a href="https://linkedin.com/in/vkrishna04">
+    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+  <a href="mailto:me@vkrishna04.me">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+  </a>
+  <a href="https://github.com/VKrishna04">
+    <img src="https://img.shields.io/badge/Founder_GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  </a>
+  <a href="https://vkrishna04.me">
+    <img src="https://img.shields.io/badge/Portfolio_Website-a855f7?style=for-the-badge&logo=react&logoColor=white" alt="Portfolio"/>
+  </a>
 </p>
-<p>
-<a href="mailto:krishnagsvv@gmail.com"> <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"></a>
-<a href="https://www.instagram.com/vkrishna_04"> <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" alt="Instagram"></a>
-<a href="https://in.pinterest.com/VKrishna04/"> <img src="https://img.shields.io/badge/Pinterest-%23E60023.svg?style=for-the-badge&logo=Pinterest&logoColor=white" alt="Pinterest"></a>
-<a href="https://www.reddit.com/user/Krishnalsh04/"> <img src="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white" alt="Reddit"></a>
-</p>
-</div>
 
 ---
 
-<div align="center">
-    <img src="https://capsule-render.vercel.app/api?type=venom&height=250&color=gradient&text=👨🏻‍💻%20Meet%20the%20Founder&animation=fadeIn" alt="Meet the Founder">
-</div>
+<h2 align="center">🚀 Featured Organization Projects</h2>
 
-<div align="center">
-
-## 🧑‍💻 Krishna GSVV - The Experimentalist
-
-</div>
-
-```json
-{
-    "name": "Krishna GSVV",
-    "role": "Founder & Lead Developer",
-    "organization": "Life Experimentalist",
-    "description": "A passionate learner and tech enthusiast developer from India who loves to explore new technologies and frameworks through practical experimentation.",
-    "located_in": "Visakhapatnam, India",
-    "current_job": "Software Development Engineer",
-    "education": [
-        "Student at Amrita Vishwa Vidyapeetham",
-        "Bachelor's in Computer Science and Engineering",
-        "CGPA: 8.6"
-    ],
-    "specializations": [
-        "Backend Development",
-        "Data Structures and Algorithms",
-        "Cloud Computing",
-        "Data Science",
-        "Full Stack Development"
-    ],
-    "technical_background": [
-        "Backend Developer",
-        "Cloud Computing Enthusiast",
-        "Full Stack Developer",
-        "Python Developer",
-        "Flask and Django Developer"
-    ],
-    "currently_experimenting_with": [
-        "Java Advanced Concepts",
-        "Docker Containerization",
-        "React Native Development",
-        "Microservices Architecture"
-    ],
-    "2025_organization_goals": [
-        "Launch 10+ innovative projects",
-        "Explore 5-7 cutting-edge technologies",
-        "Build a community of experimentalists",
-        "Open source contributions"
-    ],
-    "personal_interests": ["Novels", "Cinema", "Comedy", "Anime", "Outdoor Games"],
-    "tech_arsenal": {
-        "languages": ["Python", "Java", "C", "C++", "SQL", "JavaScript"],
-        "frameworks": ["React", "Django", "Flask", "FastAPI", "Streamlit", "NodeJS"],
-        "cloud_devops": ["AWS", "Docker", "Kubernetes", "Git"],
-        "databases": ["SQLite3", "MySQL", "MongoDB", "PostgreSQL"],
-        "tools": ["VS Code", "PyCharm", "Jupyter", "Excel"]
-    }
-}
-```
-
----
-
-<h2 align="center">🛠️ Our Technology Stack</h2>
-
-<div align="center">
-
-### Programming Languages
-<p>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="python" width="50" height="50"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"  alt="java" width="50" height="50" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="cLang" width="50" height="50"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="50" height="50"/>
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="50" height="50" />
-</p>
-
-### Frameworks & Libraries
-<p>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" alt="django" width="50" height="50" style="filter: invert(1);"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="react" width="50" height="50" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html" width="50" height="50"/>
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="50" height="50" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg" alt="bootstrap" width="50" height="50" />
-</p>
-
-### Data Science & ML
-<p>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg" alt="jupyter" width="50" height="50" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" alt="numpy" width="50" height="50" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" alt="pandas" width="50" height="50" style="filter: invert(1);"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" alt="tensorflow" width="50" height="50" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/keras/keras-original.svg" alt="keras" width="50" height="50" />
-</p>
-
-### Databases
-<p>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="postgresql" width="50" height="50" />
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" alt="mongodb" width="50" height="50" />
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="50" height="50" />
-</p>
-
-### Cloud & DevOps
-<p>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" width="50" height="50"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="docker" width="50" height="50"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="kubernetes" width="50" height="50"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="git" width="50" height="50"/>
-</p>
-
-### Development Tools
-<p>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="vscode" width="50" height="50"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pycharm/pycharm-original.svg" alt="pycharm" width="50" height="50"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="github" width="50" height="50" style="filter: invert(1);"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/playwright/playwright-original.svg" alt="playwright" width="50" height="50" />
-</p>
-
-</div>
-
----
-
-<h2 align="center">🚀 Featured Projects</h2>
-
-<div align="center">
-
-> *"Every experiment teaches us something new. Every line of code brings us closer to innovation."*
-
-Explore our collection of innovative projects spanning AI, web development, and developer tools.
-
-</div>
-
-<div align="center">
-<table>
-<tr>
-<td align="center" width="50%">
-
-### 🤖 AI & Machine Learning
-[![SignLanguageDetector](https://img.shields.io/badge/🤟_Sign_Language_Detector-Python-blue?style=for-the-badge)](https://github.com/Life-Experimentalist/SignLanguageDetector)
-![Stars](https://img.shields.io/github/stars/Life-Experimentalist/SignLanguageDetector?style=flat-square)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
-
-Real-time ISL 🇮🇳 recognition system using OpenCV, MediaPipe, and Flask. Bridges communication gaps with AI-powered gesture recognition.
-
----
-
-[![RanobeGemini](https://img.shields.io/badge/📚_Ranobe_Gemini-JavaScript-yellow?style=for-the-badge)](https://github.com/Life-Experimentalist/RanobeGemini)
-![Stars](https://img.shields.io/github/stars/Life-Experimentalist/RanobeGemini?style=flat-square)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
-
-Browser extension enhancing web novel translations using Google's Gemini AI. One-click transformation of poorly translated content.
-
-</td>
-<td align="center" width="50%">
-
-### 🌐 Web Development
-[![HiveXplore](https://img.shields.io/badge/🐝_Hive_Xplore-Python-green?style=for-the-badge)](https://github.com/Life-Experimentalist/HiveXplore)
-![Stars](https://img.shields.io/github/stars/Life-Experimentalist/HiveXplore?style=flat-square)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
-
-Beginner-friendly Hive blockchain app introducing decentralized social media without technical barriers. Simplified Web3 experience.
-
----
-
-[![eVidya](https://img.shields.io/badge/📖_eVidya-JavaScript-orange?style=for-the-badge)](https://github.com/Life-Experimentalist/eVidya)
-![Stars](https://img.shields.io/github/stars/Life-Experimentalist/eVidya?style=flat-square)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
-
-Interactive tech learning platform with progress tracking, video lessons, and quizzes. Self-paced education for programming languages.
-
-</td>
-</tr>
-<tr>
-<td align="center" colspan="2">
-
-### 🛠️ Developer Tools & Extensions
-[![cspell-sync](https://img.shields.io/badge/📝_cspell--sync-TypeScript-blue?style=for-the-badge)](https://github.com/Life-Experimentalist/cspell-sync)
-![Stars](https://img.shields.io/github/stars/Life-Experimentalist/cspell-sync?style=flat-square)
-[![Global-Save-State](https://img.shields.io/badge/💾_Global_Save_State-TypeScript-purple?style=for-the-badge)](https://github.com/Life-Experimentalist/Global-Save-State)
-![Stars](https://img.shields.io/github/stars/Life-Experimentalist/Global-Save-State?style=flat-square)
-
-VS Code extensions for enhanced development workflow - spell checking synchronization and project save state management.
-
-</td>
-</tr>
+<table width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <h3>💻 CodeLedger</h3>
+      <p><em>LeetCode DSA Auto-Commit Browser Extension.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square" />
+        <img src="https://img.shields.io/badge/Cloudflare_Workers-F38020?style=flat-square" />
+        <img src="https://counter.vkrishna04.me/api/views/Code-Ledger/badge?color=a855f7" alt="Views"/>
+      </p>
+      <p>Manifest V3 browser extension that intercepts accepted DSA solutions, runs inline AI code review, and commits them to user's GitHub, auto-generating a live Pages dashboard.</p>
+      <a href="https://github.com/Life-Experimentalist/Code-Ledger">🔗 View Repository</a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>⏳ Chronos-Ledger</h3>
+      <p><em>Campus Schedule & Attendance Management Platform.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square" />
+        <img src="https://img.shields.io/badge/FastAPI-005571?style=flat-square" />
+        <img src="https://counter.vkrishna04.me/api/views/chronos-ledger/badge?color=a855f7" alt="Views"/>
+      </p>
+      <p>Dockerized, offline-first campus timetabling and geofenced attendance system with 3D GPS checks, reverse RSVP scheduling, and real-time WebSockets.</p>
+      <a href="https://github.com/Life-Experimentalist/chronos-ledger">🔗 View Repository</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🏥 PulseWard-HMS</h3>
+      <p><em>Modular Tenant-Aware Hospital Management Platform.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square" />
+        <img src="https://img.shields.io/badge/Express-000000?style=flat-square" />
+        <img src="https://counter.vkrishna04.me/api/views/PulseWard-HMS/badge?color=a855f7" alt="Views"/>
+      </p>
+      <p>Tenant-isolated healthcare platform with patient and clinician portals, Express APIs, strict contract testing, and Expo push notification appointment workflows.</p>
+      <a href="https://github.com/Life-Experimentalist/PulseWard-HMS">🔗 View Repository</a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🧠 EquiLens</h3>
+      <p><em>LLM Bias Auditing & Evaluation System.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/Python-blue?style=flat-square" />
+        <img src="https://img.shields.io/badge/Ollama-black?style=flat-square" />
+        <img src="https://counter.vkrishna04.me/api/views/EquiLens/badge?color=a855f7" alt="Views"/>
+      </p>
+      <p>Multi-metric bias detection CLI for local LLMs via Ollama, generating structured fairness audit data, statistics, and graphs (published on Zenodo).</p>
+      <a href="https://github.com/Life-Experimentalist/EquiLens">🔗 View Repository</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>📚 RanobeGemini</h3>
+      <p><em>Gemini-powered Web Novel Translation Enhancer.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/JavaScript-yellow?style=flat-square" />
+        <img src="https://img.shields.io/badge/Gemini_AI-purple?style=flat-square" />
+        <img src="https://counter.vkrishna04.me/api/views/RanobeGemini/badge?color=a855f7" alt="Views"/>
+      </p>
+      <p>Cross-browser Manifest V3 extension providing semantic, context-aware translations of web novels with context-awareness using Google Gemini APIs.</p>
+      <a href="https://github.com/Life-Experimentalist/RanobeGemini">🔗 View Repository</a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🛡️ ToxicGuard AI</h3>
+      <p><em>Local Browser-Native Content Moderation tool.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/TensorFlow.js-orange?style=flat-square" />
+        <img src="https://img.shields.io/badge/NLP-blue?style=flat-square" />
+        <img src="https://counter.vkrishna04.me/api/views/ToxicGuard_AI/badge?color=a855f7" alt="Views"/>
+      </p>
+      <p>Real-time speech filter extension powered by browser-local TensorFlow models for complete user privacy and custom sensitivity thresholds.</p>
+      <a href="https://github.com/Life-Experimentalist/ToxicGuard_AI">🔗 View Repository</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🐝 HiveXplore</h3>
+      <p><em>Simplified Web3 Hive Social Media Portal.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/Flask-grey?style=flat-square" />
+        <img src="https://img.shields.io/badge/Hive_Web3-red?style=flat-square" />
+        <img src="https://counter.vkrishna04.me/api/views/HiveXplore/badge?color=a855f7" alt="Views"/>
+      </p>
+      <p>Onboarding decentralized social media web application designed to welcome newcomers without technical complexity (IIT Delhi CodeHive Runner-up).</p>
+      <a href="https://github.com/Life-Experimentalist/HiveXplore">🔗 View Repository</a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>📝 cspell-sync</h3>
+      <p><em>VS Code dictionary synchronizer.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/TypeScript-blue?style=flat-square" />
+        <img src="https://img.shields.io/badge/VS_Code_Extension-navy?style=flat-square" />
+        <img src="https://counter.vkrishna04.me/api/views/cspell-sync/badge?color=a855f7" alt="Views"/>
+      </p>
+      <p>VS Code Marketplace extension enabling dictionary synchronization to keep spelling rules consistent across workspaces (2K+ installs).</p>
+      <a href="https://github.com/Life-Experimentalist/cspell-sync">🔗 View Repository</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>💾 Save-Sync</h3>
+      <p><em>Workspace checkpoint and rollback utility.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/TypeScript-blue?style=flat-square" />
+        <img src="https://img.shields.io/badge/VS_Code_Extension-navy?style=flat-square" />
+        <img src="https://counter.vkrishna04.me/api/views/Save-Sync/badge?color=a855f7" alt="Views"/>
+      </p>
+      <p>VS Code extension that lets developers save checkpoints and roll back projects to historical milestones with timeline views.</p>
+      <a href="https://github.com/Life-Experimentalist/Save-Sync">🔗 View Repository</a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🤟 Facial-Emotion-Detector</h3>
+      <p><em>Real-Time Facial Landmark & Emotion Classifier.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/Python-blue?style=flat-square" />
+        <img src="https://img.shields.io/badge/MediaPipe-cyan?style=flat-square" />
+        <img src="https://counter.vkrishna04.me/api/views/Facial-Emotion-Detector/badge?color=a855f7" alt="Views"/>
+      </p>
+      <p>Extracts facial landmarks and classifies emotions in real-time using MediaPipe and machine learning (Tredence InfinityAI runner-up).</p>
+      <a href="https://github.com/Life-Experimentalist/Facial-Emotion-Detector">🔗 View Repository</a>
+    </td>
+  </tr>
 </table>
-</div>
 
 ---
 
 <h2 align="center">🤝 How to Contribute</h2>
 
 <div align="center">
-
-We welcome contributions from fellow experimentalists! Here's how you can get involved:
-
-</div>
-
-<div align="center">
-<table>
-<tr>
-<td align="center" width="33%">
-
-### 🍴 Fork & Contribute
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-</td>
-<td align="center" width="33%">
-
-### 🐛 Report Issues
-Found a bug or have a suggestion?
-- Open an issue on GitHub
-- Provide detailed descriptions
-- Include reproduction steps
-
-</td>
-<td align="center" width="33%">
-
-### 💡 Share Ideas
-Have an innovative project idea?
-- Start a discussion
-- Collaborate on new experiments
-- Join our learning journey
-
-</td>
-</tr>
-</table>
-</div>
-
-<div align="center">
-
-[![Contribute Now](https://img.shields.io/badge/Start_Contributing-Choose_Project-brightgreen?style=for-the-badge&logo=github)](https://github.com/Life-Experimentalist)
-
-</div>
-
----
-
-<h2 align="center">📊 Organization Statistics</h2>
-
-<div align="center">
-  <table>
+  <table width="100%">
     <tr>
-      <td align="center">
-        <img src="https://img.shields.io/badge/Total_Repositories-6+-blue?style=for-the-badge&logo=github" alt="Total Repos"/>
+      <td align="center" width="33%">
+        <h3>🍴 Fork & Pull</h3>
+        <p>Fork any repo, branch off, make your updates, and open a Pull Request. We review and merge active contributions!</p>
       </td>
-      <td align="center">
-        <img src="https://img.shields.io/badge/Languages-5+-green?style=for-the-badge&logo=code" alt="Languages"/>
+      <td align="center" width="33%">
+        <h3>🐛 Report Issues</h3>
+        <p>Find bugs or have ideas? Open an issue on the relevant repository and detail your findings or feature concepts.</p>
       </td>
-      <td align="center">
-        <img src="https://img.shields.io/badge/Active_Projects-6-orange?style=for-the-badge&logo=rocket" alt="Active Projects"/>
+      <td align="center" width="33%">
+        <h3>💡 Share Ideas</h3>
+        <p>Start a discussion thread on the organization page, collaborate on new experiments, or learn alongside our community.</p>
       </td>
     </tr>
   </table>
 </div>
 
+---
+
+<h2 align="center">📊 Organization Stats</h2>
+
 <div align="center">
+  <table align="center">
+    <tr>
+      <td align="center"><img src="https://img.shields.io/badge/Total_Repositories-25+-blue?style=for-the-badge&logo=github" alt="Total Repos"/></td>
+      <td align="center"><img src="https://img.shields.io/badge/Languages-10+-green?style=for-the-badge&logo=code" alt="Languages"/></td>
+      <td align="center"><img src="https://img.shields.io/badge/Status-Active-orange?style=for-the-badge&logo=rocket" alt="Status"/></td>
+    </tr>
+  </table>
+  <br/>
   <img src="https://github-readme-stats.vercel.app/api/top-langs?username=vkrishna04&theme=radical&hide_border=true&layout=compact&langs_count=10" alt="Languages Used" />
 </div>
 
 ---
-
-<h2 align="center">🏆 Platforms & Achievements</h2>
-
-<div align="center">
-<p>
-	<a href="https://leetcode.com/u/VKrishna04/"><img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06" alt="LeetCode"></a>
-	<a href="https://www.hackerrank.com/profile/VKrishna04"><img src="https://img.shields.io/badge/-Hackerrank-2EC866?style=for-the-badge&logo=HackerRank&logoColor=white" alt="Hackerrank"></a>
-	<a href="https://www.kaggle.com/krishnagsvv"><img src="https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white" alt="Kaggle"></a>
-</p>
-<p>
-	<a href="https://vkrishna04.github.io/"><img src="https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white" alt="Github Pages"></a>
-	<a href=""><img src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel"></a>
-	<a href=""><img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS"></a>
-</p>
-<p>
-	<a href=""><img src="https://img.shields.io/badge/github_copilot-8957E5?style=for-the-badge&logo=github-copilot&logoColor=white" alt="GitHub Copilot"></a>
-	<a href=""><img src="https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white" alt="ChatGPT"></a>
-</p>
-</div>
-
----
-
-<h2 align="center">🏅 GitHub Achievements</h2>
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=vkrishna04&theme=darkhub&no-frame=true&row=1&column=7" alt="VKrishna04 Trophies" />
-</p>
-
----
-
-<h2 align="center">📊 Organization Analytics</h2>
-
-<div align="center">
-  <table>
-    <tr>
-      <td>
-        <img src="https://github-readme-stats.vercel.app/api?username=vkrishna04&show_icons=true&theme=radical&hide_border=true&count_private=true" alt="GitHub Stats" />
-      </td>
-      <td>
-        <img src="https://github-readme-streak-stats.herokuapp.com/?user=vkrishna04&theme=radical&hide_border=true" alt="GitHub Streak" />
-      </td>
-    </tr>
-  </table>
-</div>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=vkrishna04&theme=radical&hide_border=true&layout=compact&langs_count=10" alt="Top Languages" />
-</div>
-
-<div align="center">
-  <table>
-    <tr>
-      <td>
-        <img src="https://github-readme-activity-graph.vercel.app/graph?username=vkrishna04&theme=react-dark&hide_border=true&area=true" alt="GitHub Activity Graph" />
-      </td>
-    </tr>
-  </table>
-</div>
-
-<div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=vkrishna04&theme=radical" alt="GitHub Profile Summary" />
-</div>
-
----
-
-<h2 align="center">🎯 Current Focus Areas</h2>
-
-<div align="center">
-<table>
-<tr>
-<td align="center" width="50%">
-
-### 🚀 Active Experiments
-- **Backend Architecture** - Scalable microservices
-- **Cloud Native Apps** - Kubernetes deployments
-- **AI/ML Integration** - Smart automation tools
-- **Full Stack Projects** - React + Django combinations
-
-</td>
-<td align="center" width="50%">
-
-### 📚 Learning Journey
-- **Advanced Java** - Enterprise patterns
-- **Docker Mastery** - Container orchestration
-- **React Native** - Mobile development
-- **DevOps Practices** - CI/CD pipelines
-
-</td>
-</tr>
-</table>
-</div>
-
----
-
-<h2 align="center">💡 Daily Inspiration</h2>
-
-<div align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Random Dev Quote"/>
-</div>
-
----
-
-<h2 align="center">🤝 Let's Collaborate!</h2>
-
-<div align="center">
-
-We're always looking for fellow experimentalists who share our passion for innovation!
-
-**Interested in contributing?** Check out our repositories and feel free to:
-- 🍴 Fork our projects
-- 🐛 Report issues
-- 💡 Suggest new features
-- 🔄 Submit pull requests
-- ⭐ Star repositories you find interesting
-
-</div>
-
----
-
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=gradient&section=footer&reversal=false&textBg=false&animation=fadeIn&fontAlignY=60&desc=Keep%20Experimenting!&descAlignY=85&descSize=16"/>
-</div>
 
 <div align="center">
   <sub>Built with ❤️ by <a href="https://github.com/VKrishna04">Krishna GSVV</a> • <a href="https://github.com/Life-Experimentalist">Life Experimentalist</a></sub>
