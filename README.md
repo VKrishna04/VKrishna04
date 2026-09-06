@@ -46,7 +46,7 @@
           <td>🏆 <strong>₹3.75L+</strong> Prize Money</td>
         </tr>
         <tr>
-          <td>📈 <strong>1000+</strong> Contributions</td>
+          <td>📈 <strong>2,500+</strong> Contributions</td>
           <td>📚 <strong>2+</strong> Publications</td>
         </tr>
         <tr>
