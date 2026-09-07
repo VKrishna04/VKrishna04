@@ -262,7 +262,7 @@
       <ul>
         <li>Clients use one key and the standard OpenAI API.</li>
         <li>Your provider credentials never leave your deployment.</li>
-        <li>Multi-tenant: isolated keys and configuration per tenant.</li>
+        <li>Multi-tenant deployment behind a single gateway.</li>
       </ul>
       <a href="https://github.com/Life-Experimentalist/CogniGate">🔗 View Repository</a> • <a href="https://cognigate.vkrishna04.me">🌐 Website</a>
     </td>
@@ -421,7 +421,7 @@
         <li>One-command setup with uv; includes a training CLI and model analytics.</li>
         <li>REST API alongside in-browser inference.</li>
       </ul>
-      <a href="https://github.com/Life-Experimentalist/SignLanguageDetector">🔗 View Repository</a> • <a href="http://sign.vkrishna04.me">🌐 Website</a>
+      <a href="https://github.com/Life-Experimentalist/SignLanguageDetector">🔗 View Repository</a> • <a href="https://sign.vkrishna04.me">🌐 Website</a>
     </td>
     <td width="50%" valign="top">
       <h3>💾 Save-Sync</h3>
