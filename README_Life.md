@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <img src="https://counter.vkrishna04.me/api/views/Life-Experimentalist/badge?color=a855f7" alt="Organization Views"/>
+  <img src="https://counter.vkrishna04.me/api/views/Life-Experimentalist/badge?color=a855f7&inc=true" alt="Organization Views"/>
 </p>
 
 <div align="center">
@@ -77,15 +77,15 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3>🏥 PulseWard-HMS</h3>
-      <p><em>Modular Tenant-Aware Hospital Management Platform.</em></p>
+      <h3>🚪 CogniGate</h3>
+      <p><em>Self-hosted, multi-tenant LLM gateway.</em></p>
       <p>
-        <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square" />
-        <img src="https://img.shields.io/badge/Express-000000?style=flat-square" />
-        <img src="https://counter.vkrishna04.me/api/views/PulseWard-HMS/badge?color=a855f7" alt="Views"/>
+        <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square" />
+        <img src="https://img.shields.io/badge/OpenAI_Compatible_API-412991?style=flat-square" />
+        <img src="https://counter.vkrishna04.me/api/views/CogniGate/badge?color=a855f7" alt="Views"/>
       </p>
-      <p>Tenant-isolated healthcare platform with patient and clinician portals, Express APIs, strict contract testing, and Expo push notification appointment workflows.</p>
-      <a href="https://github.com/Life-Experimentalist/PulseWard-HMS">🔗 View Repository</a>
+      <p>Go gateway where clients use one key and the standard OpenAI API while provider credentials never leave your deployment. Live at cognigate.vkrishna04.me.</p>
+      <a href="https://github.com/Life-Experimentalist/CogniGate">🔗 View Repository</a>
     </td>
     <td width="50%" valign="top">
       <h3>🧠 EquiLens</h3>
@@ -101,6 +101,52 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
+      <h3>🧹 dev-prune</h3>
+      <p><em>Reclaim disk space from idle Git repositories.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/Rust-000000?style=flat-square" />
+        <img src="https://img.shields.io/badge/CLI-4EAA25?style=flat-square" />
+        <img src="https://counter.vkrishna04.me/api/views/dev-prune/badge?color=a855f7" alt="Views"/>
+      </p>
+      <p>Rust CLI that deletes node_modules, .venv, target, and vendor from idle repos only after the project's own package manager proves a lockfile can rebuild them. On the org's Homebrew tap and Scoop bucket.</p>
+      <a href="https://github.com/Life-Experimentalist/dev-prune">🔗 View Repository</a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🪪 LoginLens</h3>
+      <p><em>Which account, OAuth provider, and MFA method you used on every site.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/TypeScript-blue?style=flat-square" />
+        <img src="https://img.shields.io/badge/Manifest_V3-orange?style=flat-square" />
+        <img src="https://counter.vkrishna04.me/api/views/LoginLens/badge?color=a855f7" alt="Views"/>
+      </p>
+      <p>Local-first browser extension built with Plasmo and React. No passwords stored, no account, no backend, no telemetry; login history stays in IndexedDB on your device.</p>
+      <a href="https://github.com/Life-Experimentalist/LoginLens">🔗 View Repository</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>⚡ ViewFlare</h3>
+      <p><em>Ultra-efficient serverless view counter.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/Cloudflare_Workers-F38020?style=flat-square" />
+        <img src="https://counter.vkrishna04.me/api/views/ViewFlare/badge?color=a855f7" alt="Views"/>
+      </p>
+      <p>Serverless view counter with SVG badges and an admin panel, optimized for Cloudflare's free tier. Live at counter.vkrishna04.me, powering every view badge on this page.</p>
+      <a href="https://github.com/Life-Experimentalist/ViewFlare">🔗 View Repository</a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🏥 PulseWard-HMS</h3>
+      <p><em>Hospital management platform.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/License-Proprietary-red?style=flat-square" />
+        <img src="https://counter.vkrishna04.me/api/views/PulseWard-HMS/badge?color=a855f7" alt="Views"/>
+      </p>
+      <p>Proprietary, closed-source project in a private repository. Project overview available on the founder's portfolio.</p>
+      <a href="https://vkrishna04.me/projects/pulseward-hms">🔗 Project Overview</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
       <h3>📚 RanobeGemini</h3>
       <p><em>Gemini-powered Web Novel Translation Enhancer.</em></p>
       <p>
@@ -108,32 +154,8 @@
         <img src="https://img.shields.io/badge/Gemini_AI-purple?style=flat-square" />
         <img src="https://counter.vkrishna04.me/api/views/RanobeGemini/badge?color=a855f7" alt="Views"/>
       </p>
-      <p>Cross-browser Manifest V3 extension providing semantic, context-aware translations of web novels with context-awareness using Google Gemini APIs.</p>
+      <p>Cross-browser Manifest V3 extension providing semantic, context-aware translations of web novels using Google Gemini APIs.</p>
       <a href="https://github.com/Life-Experimentalist/RanobeGemini">🔗 View Repository</a>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🛡️ ToxicGuard AI</h3>
-      <p><em>Local Browser-Native Content Moderation tool.</em></p>
-      <p>
-        <img src="https://img.shields.io/badge/TensorFlow.js-orange?style=flat-square" />
-        <img src="https://img.shields.io/badge/NLP-blue?style=flat-square" />
-        <img src="https://counter.vkrishna04.me/api/views/ToxicGuard_AI/badge?color=a855f7" alt="Views"/>
-      </p>
-      <p>Real-time speech filter extension powered by browser-local TensorFlow models for complete user privacy and custom sensitivity thresholds.</p>
-      <a href="https://github.com/Life-Experimentalist/ToxicGuard_AI">🔗 View Repository</a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🐝 HiveXplore</h3>
-      <p><em>Simplified Web3 Hive Social Media Portal.</em></p>
-      <p>
-        <img src="https://img.shields.io/badge/Flask-grey?style=flat-square" />
-        <img src="https://img.shields.io/badge/Hive_Web3-red?style=flat-square" />
-        <img src="https://counter.vkrishna04.me/api/views/HiveXplore/badge?color=a855f7" alt="Views"/>
-      </p>
-      <p>Onboarding decentralized social media web application designed to welcome newcomers without technical complexity (IIT Delhi CodeHive Runner-up).</p>
-      <a href="https://github.com/Life-Experimentalist/HiveXplore">🔗 View Repository</a>
     </td>
     <td width="50%" valign="top">
       <h3>📝 cspell-sync</h3>
@@ -149,6 +171,41 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
+      <h3>🐝 HiveXplore</h3>
+      <p><em>Simplified Web3 Hive Social Media Portal.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/Flask-grey?style=flat-square" />
+        <img src="https://img.shields.io/badge/Hive_Web3-red?style=flat-square" />
+        <img src="https://counter.vkrishna04.me/api/views/HiveXplore/badge?color=a855f7" alt="Views"/>
+      </p>
+      <p>Onboarding decentralized social media web application designed to welcome newcomers without technical complexity (IIT Delhi CodeHive Runner-up).</p>
+      <a href="https://github.com/Life-Experimentalist/HiveXplore">🔗 View Repository</a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>😊 Facial-Emotion-Detector</h3>
+      <p><em>Real-Time Facial Landmark & Emotion Classifier.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/Python-blue?style=flat-square" />
+        <img src="https://img.shields.io/badge/MediaPipe-cyan?style=flat-square" />
+        <img src="https://counter.vkrishna04.me/api/views/Facial-Emotion-Detector/badge?color=a855f7" alt="Views"/>
+      </p>
+      <p>Extracts facial landmarks and classifies emotions in real-time using MediaPipe and machine learning (Tredence InfinityAI runner-up).</p>
+      <a href="https://github.com/Life-Experimentalist/Facial-Emotion-Detector">🔗 View Repository</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🤟 SignLanguageDetector</h3>
+      <p><em>Real-time sign language detection with in-browser inference.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/Python-blue?style=flat-square" />
+        <img src="https://img.shields.io/badge/MediaPipe-cyan?style=flat-square" />
+        <img src="https://counter.vkrishna04.me/api/views/SignLanguageDetector/badge?color=a855f7" alt="Views"/>
+      </p>
+      <p>Webcam frames run through MediaPipe landmarks into a RandomForest classifier, with a training CLI, model analytics, a REST API, and in-browser inference. Live at sign.vkrishna04.me.</p>
+      <a href="https://github.com/Life-Experimentalist/SignLanguageDetector">🔗 View Repository</a>
+    </td>
+    <td width="50%" valign="top">
       <h3>💾 Save-Sync</h3>
       <p><em>Workspace checkpoint and rollback utility.</em></p>
       <p>
@@ -158,17 +215,6 @@
       </p>
       <p>VS Code extension that lets developers save checkpoints and roll back projects to historical milestones with timeline views.</p>
       <a href="https://github.com/Life-Experimentalist/Save-Sync">🔗 View Repository</a>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🤟 Facial-Emotion-Detector</h3>
-      <p><em>Real-Time Facial Landmark & Emotion Classifier.</em></p>
-      <p>
-        <img src="https://img.shields.io/badge/Python-blue?style=flat-square" />
-        <img src="https://img.shields.io/badge/MediaPipe-cyan?style=flat-square" />
-        <img src="https://counter.vkrishna04.me/api/views/Facial-Emotion-Detector/badge?color=a855f7" alt="Views"/>
-      </p>
-      <p>Extracts facial landmarks and classifies emotions in real-time using MediaPipe and machine learning (Tredence InfinityAI runner-up).</p>
-      <a href="https://github.com/Life-Experimentalist/Facial-Emotion-Detector">🔗 View Repository</a>
     </td>
   </tr>
 </table>
@@ -203,7 +249,7 @@
 <div align="center">
   <table align="center">
     <tr>
-      <td align="center"><img src="https://img.shields.io/badge/Total_Repositories-25+-blue?style=for-the-badge&logo=github" alt="Total Repos"/></td>
+      <td align="center"><img src="https://img.shields.io/badge/Total_Repositories-30+-blue?style=for-the-badge&logo=github" alt="Total Repos"/></td>
       <td align="center"><img src="https://img.shields.io/badge/Languages-10+-green?style=for-the-badge&logo=code" alt="Languages"/></td>
       <td align="center"><img src="https://img.shields.io/badge/Status-Active-orange?style=for-the-badge&logo=rocket" alt="Status"/></td>
     </tr>

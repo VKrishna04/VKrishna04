@@ -1,0 +1,45 @@
+name: Sync Life org README
+
+on:
+  push:
+    branches: [main]
+    paths: [README_Life.md]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      ORG_README_TOKEN: ${{ secrets.ORG_README_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Warn when the token secret is missing
+        if: env.ORG_README_TOKEN == ''
+        run: echo "::warning::ORG_README_TOKEN secret is not set, skipping sync. Create a fine-grained PAT with Contents read/write on Life-Experimentalist/.github and add it as a repository secret named ORG_README_TOKEN."
+
+      - name: Push README_Life.md to Life-Experimentalist/.github profile/README.md
+        if: env.ORG_README_TOKEN != ''
+        env:
+          GH_TOKEN: ${{ secrets.ORG_README_TOKEN }}
+        run: |
+          NEW=$(base64 -w0 README_Life.md)
+          CUR=$(gh api repos/Life-Experimentalist/.github/contents/profile/README.md || echo '{}')
+          CUR_SHA=$(jq -r '.sha // empty' <<<"$CUR")
+          CUR_B64=$(jq -r '.content // empty' <<<"$CUR" | tr -d '\n')
+          if [ "$NEW" = "$CUR_B64" ]; then
+            echo "Org README already up to date."
+            exit 0
+          fi
+          if [ -n "$CUR_SHA" ]; then
+            gh api -X PUT repos/Life-Experimentalist/.github/contents/profile/README.md \
+              -f message="Sync org profile README from VKrishna04/README_Life.md" \
+              -f content="$NEW" -f sha="$CUR_SHA"
+          else
+            gh api -X PUT repos/Life-Experimentalist/.github/contents/profile/README.md \
+              -f message="Sync org profile README from VKrishna04/README_Life.md" \
+              -f content="$NEW"
+          fi
