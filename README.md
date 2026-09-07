@@ -317,14 +317,14 @@
   <tr>
     <td width="50%" valign="top">
       <h3>⚡ ViewFlare</h3>
-      <p><em>Ultra-efficient serverless view counter.</em></p>
+      <p><em>Serverless view counters: one POST to count, one image URL for the badge.</em></p>
       <p>
         <img src="https://img.shields.io/badge/Cloudflare_Workers-F38020?style=flat-square&logo=cloudflare&logoColor=white" />
         <img src="https://counter.vkrishna04.me/api/views/ViewFlare/badge?color=a855f7" alt="Views"/>
       </p>
       <ul>
-        <li>SVG badges and an admin panel, optimized for Cloudflare's free tier.</li>
-        <li>Headless telemetry tracking.</li>
+        <li>Runs on Cloudflare Workers and D1, with configurable SVG badge styles and colours.</li>
+        <li>Optional unique-visitor analytics and admin endpoints, checked continuously in CI.</li>
         <li>Powers every view badge on this page, live at counter.vkrishna04.me.</li>
       </ul>
       <a href="https://github.com/Life-Experimentalist/ViewFlare">🔗 View Repository</a>
@@ -346,18 +346,18 @@
   <tr>
     <td width="50%" valign="top">
       <h3>📚 RanobeGemini</h3>
-      <p><em>Cosmic translator browser extension powered by Gemini.</em></p>
+      <p><em>AI reading companion for web novels and fanfiction, published on Firefox Add-ons.</em></p>
       <p>
-        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
+        <img src="https://img.shields.io/badge/Firefox_Add--on-FF7139?style=flat-square&logo=firefoxbrowser&logoColor=white" />
         <img src="https://img.shields.io/badge/Gemini_AI-8E75C2?style=flat-square&logo=google-gemini&logoColor=white" />
         <img src="https://counter.vkrishna04.me/api/views/RanobeGemini/badge?color=a855f7" alt="Views"/>
       </p>
       <ul>
-        <li>One-click translation enhancer for web novels on foreign reading sites.</li>
-        <li>Features context-aware NLP text processing using Gemini APIs.</li>
-        <li>Highly optimized cross-browser Manifest V3 architecture.</li>
+        <li>One-click AI translation and enhancement on ranobes.top, FanFiction.net, AO3 and ScribbleHub.</li>
+        <li>Bring your own provider: Gemini, any OpenAI-compatible endpoint, or local Ollama.</li>
+        <li>Shelf-aware library that tracks reading status, characters, relationships and tags.</li>
       </ul>
-      <a href="https://github.com/Life-Experimentalist/RanobeGemini">🔗 View Repository</a>
+      <a href="https://github.com/Life-Experimentalist/RanobeGemini">🔗 View Repository</a> • <a href="https://addons.mozilla.org/en-US/firefox/addon/ranobegemini/">🦊 Firefox Add-ons</a>
     </td>
     <td width="50%" valign="top">
       <h3>📝 cspell-sync</h3>
@@ -425,19 +425,50 @@
     </td>
     <td width="50%" valign="top">
       <h3>💾 Save-Sync</h3>
-      <p><em>VS Code checkpoint and rollback utility.</em></p>
+      <p><em>Save points for code, for when git is overkill.</em></p>
       <p>
         <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
         <img src="https://img.shields.io/badge/VS_Code_Extension-navy?style=flat-square" />
         <img src="https://counter.vkrishna04.me/api/views/Save-Sync/badge?color=a855f7" alt="Views"/>
       </p>
       <ul>
-        <li>Saves workspace state at meaningful checkpoints/milestones.</li>
-        <li>Restores project files easily to any historical checkpoint.</li>
-        <li>Timeline panel displaying previous checkpoint history.</li>
-        <li>Extremely lightweight, running locally without cloud requirements.</li>
+        <li>Game-style save points: snapshot the workspace at any moment, roll back from a timeline view.</li>
+        <li>Overlay restore keeps files added since a save point instead of wiping them.</li>
+        <li>Save points live as plain JSON under .vscode, auto-gitignored, no cloud required.</li>
       </ul>
-      <a href="https://github.com/Life-Experimentalist/Save-Sync">🔗 View Repository</a>
+      <a href="https://github.com/Life-Experimentalist/Save-Sync">🔗 View Repository</a> • <a href="https://marketplace.visualstudio.com/items?itemName=VKrishna04.global-save-state">🧩 VS Code Marketplace</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🧰 portfolio-creator</h3>
+      <p><em>Fill in a form, get a portfolio.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" />
+        <img src="https://img.shields.io/badge/JSON_Schema-000000?style=flat-square&logo=json&logoColor=white" />
+        <img src="https://counter.vkrishna04.me/api/views/portfolio-creator/badge?color=a855f7" alt="Views"/>
+      </p>
+      <ul>
+        <li>Guided form generates a settings file for the same JSON-driven template that powers vkrishna04.me.</li>
+        <li>Validates every field against the portfolio's own split JSON Schema as you fill it in.</li>
+        <li>Three exits: download the file, let a scoped token create the repo and enable Pages, or host anywhere.</li>
+      </ul>
+      <a href="https://github.com/Life-Experimentalist/portfolio-creator">🔗 View Repository</a> • <a href="https://life-experimentalist.github.io/portfolio-creator/">🌐 Website</a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🎥 Vectra-180</h3>
+      <p><em>A dual-fisheye dashcam for the Pi Compute Module 5.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+        <img src="https://img.shields.io/badge/Raspberry_Pi_CM5-A22846?style=flat-square&logo=raspberrypi&logoColor=white" />
+        <img src="https://counter.vkrishna04.me/api/views/Vectra-180/badge?color=a855f7" alt="Views"/>
+      </p>
+      <ul>
+        <li>Recording is the one non-optional duty: preview, depth and the web UI stay off the capture thread.</li>
+        <li>Survives camera brownout and never fills the SD card.</li>
+        <li>On-demand stereoscopic depth from the fisheye pair; cross-platform via UVC.</li>
+      </ul>
+      <a href="https://github.com/Life-Experimentalist/Vectra-180">🔗 View Repository</a> • <a href="https://life-experimentalist.github.io/Vectra-180/">🌐 Docs</a>
     </td>
   </tr>
 </table>
