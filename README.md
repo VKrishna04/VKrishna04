@@ -23,27 +23,29 @@
       <br/><br/>
       <h3>📍 Bengaluru, India</h3>
       <p>🎓 Amrita Vishwa Vidyapeetham</p>
-      <p>💼 B.Tech Computer Science (2026)</p>
+      <p>📜 B.Tech Computer Science (2026)</p>
+      <p>💼 Software Intern @ Fission Labs</p>
     </td>
     <td width="65%" valign="top">
       <h2>🧑‍💻 About Me</h2>
       <p>
-        I am a final-year B.Tech Computer Science student at <strong>Amrita Vishwa Vidyapeetham</strong> (Bengaluru), graduating in July 2026.
-        I build full-stack applications and AI systems that solve real problems — from browser extensions to deep learning pipelines.
+        I completed my B.Tech in Computer Science at <strong>Amrita Vishwa Vidyapeetham</strong> (Bengaluru) in July 2026, and I now work as a
+        Software Intern at <strong>Fission Labs</strong>. I build full-stack applications and AI systems that solve real problems, from browser extensions to deep learning pipelines.
       </p>
       <p>
-        Competed at the national level and won: <strong>1st runner-up</strong> at IIT Delhi CodeHive, <strong>2nd runner-up</strong> at Tredence InfinityAI 2025,
-        <strong>1st</strong> at IIT Hyderabad Pathway Hackathon, and <strong>1st</strong> at Microsoft Imagine Cup campus round — earning <strong>₹3.75L+</strong> in prizes.
+        Competed at the national level and won five times: <strong>1st</strong> at IIT Hyderabad Pathway Hackathon, <strong>1st runner-up</strong> at IIT Delhi CodeHive,
+        <strong>2nd runner-up</strong> at Tredence InfinityAI 2025, <strong>1st runner-up</strong> at ITM Gwalior Code Kurukshetra, and <strong>1st</strong> at the
+        Microsoft Imagine Cup campus round, earning <strong>₹3.55L</strong> in prizes.
       </p>
       <p>
         On the research side, my deep learning work on diabetic retinopathy severity prediction is published in <strong>IEEE Xplore</strong>, and the
-        <strong>EquiLens</strong> bias-detection corpus is released on <strong>Zenodo</strong>. I also maintain open-source tools people actually use —
+        <strong>EquiLens</strong> bias-detection corpus is released on <strong>Zenodo</strong>. I also maintain open-source tools people actually use:
         <strong>cSpell Sync</strong> has over 2,000 installs on the VS Code Marketplace.
       </p>
       <table width="100%">
         <tr>
           <td>🚀 <strong>25+</strong> Projects</td>
-          <td>🏆 <strong>₹3.75L+</strong> Prize Money</td>
+          <td>🏆 <strong>₹3.55L</strong> Prize Money</td>
         </tr>
         <tr>
           <td>📈 <strong>2,500+</strong> Contributions</td>
@@ -110,7 +112,10 @@
 <h2 align="center">🛠️ Technical Arsenal & Skills</h2>
 
 <div align="center">
-  <table>
+  <details>
+<summary><strong>Expand the full stack</strong></summary>
+
+<table>
     <tr>
       <td width="50%" valign="top">
         <h3>💻 Programming Languages</h3>
@@ -169,6 +174,8 @@
       </td>
     </tr>
   </table>
+
+</details>
 </div>
 
 ---
@@ -196,6 +203,11 @@
         <td>Won <strong>₹1,00,000</strong>. Designed a Web3 decentralized onboarding social app on Hive blockchain.</td>
       </tr>
       <tr>
+        <td>🥈 <strong>1st Runner-up</strong></td>
+        <td>ITM Gwalior Code Kurukshetra 2025</td>
+        <td>Won <strong>₹35,000</strong>. Placed with <em>MomCare</em>, a pregnancy health companion application.</td>
+      </tr>
+      <tr>
         <td>🥇 <strong>1st Place</strong></td>
         <td>IIT Hyderabad Pathway Hackathon 2025</td>
         <td>Won <strong>₹15,000</strong>. Built stream-processing pipelines using Pathway.com framework.</td>
@@ -215,7 +227,7 @@
 
 <table width="100%">
   <tr>
-    <td width="50%" valign="top">
+<td width="50%" valign="top">
       <h3>💻 CodeLedger</h3>
       <p><em>Your DSA grind, on your GitHub. Automatically.</em></p>
       <p>
@@ -232,7 +244,87 @@
       </ul>
       <a href="https://github.com/Life-Experimentalist/Code-Ledger">🔗 View Repository</a>
     </td>
-    <td width="50%" valign="top">
+<td width="50%" valign="top">
+      <h3>🚪 CogniGate</h3>
+      <p><em>Self-hosted, multi-tenant LLM gateway.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" />
+        <img src="https://img.shields.io/badge/OpenAI_Compatible_API-412991?style=flat-square&logo=openai&logoColor=white" />
+        <img src="https://counter.vkrishna04.me/api/views/CogniGate/badge?color=a855f7" alt="Views"/>
+      </p>
+      <ul>
+        <li>Clients use one key and the standard OpenAI API.</li>
+        <li>Your provider credentials never leave your deployment.</li>
+        <li>Multi-tenant deployment behind a single gateway.</li>
+      </ul>
+      <a href="https://github.com/Life-Experimentalist/CogniGate">🔗 View Repository</a> • <a href="https://cognigate.vkrishna04.me">🌐 Website</a>
+    </td>
+  </tr>
+  <tr>
+<td width="50%" valign="top">
+      <h3>🧠 EquiLens</h3>
+      <p><em>AI Bias Detection Platform for LLMs via Ollama.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+        <img src="https://img.shields.io/badge/Ollama-000000?style=flat-square" />
+        <img src="https://counter.vkrishna04.me/api/views/EquiLens/badge?color=a855f7" alt="Views"/>
+      </p>
+      <ul>
+        <li>Interactive CLI tool for auditing statistical bias in local LLM models.</li>
+        <li>Generates balanced variables, audits fairness metrics, and exports graphs.</li>
+        <li>Dataset corpus published and index-mapped on Zenodo.</li>
+      </ul>
+      <a href="https://github.com/Life-Experimentalist/EquiLens">🔗 View Repository</a>
+    </td>
+<td width="50%" valign="top">
+      <h3>🧹 dev-prune</h3>
+      <p><em>Reclaim disk space from idle Git repositories.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" />
+        <img src="https://img.shields.io/badge/CLI-4EAA25?style=flat-square&logo=gnubash&logoColor=white" />
+        <img src="https://counter.vkrishna04.me/api/views/dev-prune/badge?color=a855f7" alt="Views"/>
+      </p>
+      <ul>
+        <li>Deletes node_modules, .venv, target, and vendor from idle repos.</li>
+        <li>Prunes only after the project's own package manager proves a lockfile can rebuild them.</li>
+        <li>Installable from the org's Homebrew tap and Scoop bucket.</li>
+      </ul>
+      <a href="https://github.com/Life-Experimentalist/dev-prune">🔗 View Repository</a> • <a href="https://devprune.vkrishna04.me">🌐 Website</a>
+    </td>
+  </tr>
+  <tr>
+<td width="50%" valign="top">
+      <h3>📚 RanobeGemini</h3>
+      <p><em>AI reading companion for web novels and fanfiction, published on Firefox Add-ons and Edge Add-ons.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/Firefox_Add--on-FF7139?style=flat-square&logo=firefoxbrowser&logoColor=white" />
+        <img src="https://img.shields.io/badge/Gemini_AI-8E75C2?style=flat-square&logo=google-gemini&logoColor=white" />
+        <img src="https://counter.vkrishna04.me/api/views/RanobeGemini/badge?color=a855f7" alt="Views"/>
+      </p>
+      <ul>
+        <li>One-click AI translation and enhancement on ranobes.top, FanFiction.net, AO3 and ScribbleHub.</li>
+        <li>Bring your own provider: Gemini, any OpenAI-compatible endpoint, or local Ollama.</li>
+        <li>Shelf-aware library that tracks reading status, characters, relationships and tags.</li>
+      </ul>
+      <a href="https://github.com/Life-Experimentalist/RanobeGemini">🔗 View Repository</a> • <a href="https://addons.mozilla.org/en-US/firefox/addon/ranobegemini/">🦊 Firefox Add-ons</a> • <a href="https://microsoftedge.microsoft.com/addons/detail/ranobe-gemini/agbhdkiciomjlifhlfbjanpnhhokaimn">🌐 Edge Add-ons</a>
+    </td>
+<td width="50%" valign="top">
+      <h3>⚡ ViewFlare</h3>
+      <p><em>Serverless view counters: one POST to count, one image URL for the badge.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/Cloudflare_Workers-F38020?style=flat-square&logo=cloudflare&logoColor=white" />
+        <img src="https://counter.vkrishna04.me/api/views/ViewFlare/badge?color=a855f7" alt="Views"/>
+      </p>
+      <ul>
+        <li>Runs on Cloudflare Workers and D1, with configurable SVG badge styles and colours.</li>
+        <li>Optional unique-visitor analytics and admin endpoints, checked continuously in CI.</li>
+        <li>Powers every view badge on this page, live at counter.vkrishna04.me.</li>
+      </ul>
+      <a href="https://github.com/Life-Experimentalist/ViewFlare">🔗 View Repository</a>
+    </td>
+  </tr>
+  <tr>
+<td width="50%" valign="top">
       <h3>⏳ Chronos-Ledger</h3>
       <p><em>Multi-dimensional timetable engine: built for campus scheduling and attendance, generalizing to any system that needs to query and slice complex schedules.</em></p>
       <p>
@@ -249,56 +341,7 @@
       </ul>
       <a href="https://github.com/Life-Experimentalist/chronos-ledger">🔗 View Repository</a>
     </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🚪 CogniGate</h3>
-      <p><em>Self-hosted, multi-tenant LLM gateway.</em></p>
-      <p>
-        <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" />
-        <img src="https://img.shields.io/badge/OpenAI_Compatible_API-412991?style=flat-square&logo=openai&logoColor=white" />
-        <img src="https://counter.vkrishna04.me/api/views/CogniGate/badge?color=a855f7" alt="Views"/>
-      </p>
-      <ul>
-        <li>Clients use one key and the standard OpenAI API.</li>
-        <li>Your provider credentials never leave your deployment.</li>
-        <li>Multi-tenant deployment behind a single gateway.</li>
-      </ul>
-      <a href="https://github.com/Life-Experimentalist/CogniGate">🔗 View Repository</a> • <a href="https://cognigate.vkrishna04.me">🌐 Website</a>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🧠 EquiLens</h3>
-      <p><em>AI Bias Detection Platform for LLMs via Ollama.</em></p>
-      <p>
-        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-        <img src="https://img.shields.io/badge/Ollama-000000?style=flat-square" />
-        <img src="https://counter.vkrishna04.me/api/views/EquiLens/badge?color=a855f7" alt="Views"/>
-      </p>
-      <ul>
-        <li>Interactive CLI tool for auditing statistical bias in local LLM models.</li>
-        <li>Generates balanced variables, audits fairness metrics, and exports graphs.</li>
-        <li>Dataset corpus published and index-mapped on Zenodo.</li>
-      </ul>
-      <a href="https://github.com/Life-Experimentalist/EquiLens">🔗 View Repository</a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🧹 dev-prune</h3>
-      <p><em>Reclaim disk space from idle Git repositories.</em></p>
-      <p>
-        <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" />
-        <img src="https://img.shields.io/badge/CLI-4EAA25?style=flat-square&logo=gnubash&logoColor=white" />
-        <img src="https://counter.vkrishna04.me/api/views/dev-prune/badge?color=a855f7" alt="Views"/>
-      </p>
-      <ul>
-        <li>Deletes node_modules, .venv, target, and vendor from idle repos.</li>
-        <li>Prunes only after the project's own package manager proves a lockfile can rebuild them.</li>
-        <li>Installable from the org's Homebrew tap and Scoop bucket.</li>
-      </ul>
-      <a href="https://github.com/Life-Experimentalist/dev-prune">🔗 View Repository</a> • <a href="https://devprune.vkrishna04.me">🌐 Website</a>
-    </td>
-    <td width="50%" valign="top">
+<td width="50%" valign="top">
       <h3>🪪 LoginLens</h3>
       <p><em>See which account, OAuth provider, and MFA method you used on every site.</em></p>
       <p>
@@ -314,22 +357,14 @@
       <a href="https://github.com/Life-Experimentalist/LoginLens">🔗 View Repository</a> • <a href="https://loginlens.vkrishna04.me">🌐 Website</a>
     </td>
   </tr>
+</table>
+
+<details>
+<summary><strong>More projects</strong></summary>
+
+<table width="100%">
   <tr>
-    <td width="50%" valign="top">
-      <h3>⚡ ViewFlare</h3>
-      <p><em>Serverless view counters: one POST to count, one image URL for the badge.</em></p>
-      <p>
-        <img src="https://img.shields.io/badge/Cloudflare_Workers-F38020?style=flat-square&logo=cloudflare&logoColor=white" />
-        <img src="https://counter.vkrishna04.me/api/views/ViewFlare/badge?color=a855f7" alt="Views"/>
-      </p>
-      <ul>
-        <li>Runs on Cloudflare Workers and D1, with configurable SVG badge styles and colours.</li>
-        <li>Optional unique-visitor analytics and admin endpoints, checked continuously in CI.</li>
-        <li>Powers every view badge on this page, live at counter.vkrishna04.me.</li>
-      </ul>
-      <a href="https://github.com/Life-Experimentalist/ViewFlare">🔗 View Repository</a>
-    </td>
-    <td width="50%" valign="top">
+<td width="50%" valign="top">
       <h3>🏥 PulseWard-HMS</h3>
       <p><em>Hospital management platform.</em></p>
       <p>
@@ -342,24 +377,7 @@
       </ul>
       <a href="https://vkrishna04.me/projects/pulseward-hms">🔗 Project Overview</a>
     </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>📚 RanobeGemini</h3>
-      <p><em>AI reading companion for web novels and fanfiction, published on Firefox Add-ons.</em></p>
-      <p>
-        <img src="https://img.shields.io/badge/Firefox_Add--on-FF7139?style=flat-square&logo=firefoxbrowser&logoColor=white" />
-        <img src="https://img.shields.io/badge/Gemini_AI-8E75C2?style=flat-square&logo=google-gemini&logoColor=white" />
-        <img src="https://counter.vkrishna04.me/api/views/RanobeGemini/badge?color=a855f7" alt="Views"/>
-      </p>
-      <ul>
-        <li>One-click AI translation and enhancement on ranobes.top, FanFiction.net, AO3 and ScribbleHub.</li>
-        <li>Bring your own provider: Gemini, any OpenAI-compatible endpoint, or local Ollama.</li>
-        <li>Shelf-aware library that tracks reading status, characters, relationships and tags.</li>
-      </ul>
-      <a href="https://github.com/Life-Experimentalist/RanobeGemini">🔗 View Repository</a> • <a href="https://addons.mozilla.org/en-US/firefox/addon/ranobegemini/">🦊 Firefox Add-ons</a>
-    </td>
-    <td width="50%" valign="top">
+<td width="50%" valign="top">
       <h3>📝 cspell-sync</h3>
       <p><em>VS Code extension to sync spelling dictionaries.</em></p>
       <p>
@@ -376,39 +394,7 @@
     </td>
   </tr>
   <tr>
-    <td width="50%" valign="top">
-      <h3>🐝 HiveXplore</h3>
-      <p><em>Decentralized social media onboarding gateway.</em></p>
-      <p>
-        <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" />
-        <img src="https://img.shields.io/badge/Hive_Web3-E3133E?style=flat-square&logo=hive&logoColor=white" />
-        <img src="https://counter.vkrishna04.me/api/views/HiveXplore/badge?color=a855f7" alt="Views"/>
-      </p>
-      <ul>
-        <li>Simplifies Web3 interaction for non-technical beginners.</li>
-        <li>Supports Hive Signer, Keychain, and HiveAuth integrations.</li>
-        <li>Fast caching system via SQLite for zero delay user responses.</li>
-      </ul>
-      <a href="https://github.com/Life-Experimentalist/HiveXplore">🔗 View Repository</a>
-    </td>
-    <td width="50%" valign="top">
-      <h3>😊 Facial-Emotion-Detector</h3>
-      <p><em>Real-time emotion classifier using MediaPipe.</em></p>
-      <p>
-        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-        <img src="https://img.shields.io/badge/MediaPipe-00C0FF?style=flat-square&logo=google&logoColor=white" />
-        <img src="https://counter.vkrishna04.me/api/views/Facial-Emotion-Detector/badge?color=a855f7" alt="Views"/>
-      </p>
-      <ul>
-        <li>Extracts facial landmarks and classifies emotions in real-time.</li>
-        <li>Trained custom ML model yielding 98% prediction accuracy.</li>
-        <li>Awarded at Tredence InfinityAI national corporate hackathon.</li>
-      </ul>
-      <a href="https://github.com/Life-Experimentalist/Facial-Emotion-Detector">🔗 View Repository</a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
+<td width="50%" valign="top">
       <h3>🤟 SignLanguageDetector</h3>
       <p><em>Real-time sign language detection with in-browser inference.</em></p>
       <p>
@@ -423,7 +409,7 @@
       </ul>
       <a href="https://github.com/Life-Experimentalist/SignLanguageDetector">🔗 View Repository</a> • <a href="https://sign.vkrishna04.me">🌐 Website</a>
     </td>
-    <td width="50%" valign="top">
+<td width="50%" valign="top">
       <h3>💾 Save-Sync</h3>
       <p><em>Save points for code, for when git is overkill.</em></p>
       <p>
@@ -440,7 +426,39 @@
     </td>
   </tr>
   <tr>
-    <td width="50%" valign="top">
+<td width="50%" valign="top">
+      <h3>🐝 HiveXplore</h3>
+      <p><em>Decentralized social media onboarding gateway.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" />
+        <img src="https://img.shields.io/badge/Hive_Web3-E3133E?style=flat-square&logo=hive&logoColor=white" />
+        <img src="https://counter.vkrishna04.me/api/views/HiveXplore/badge?color=a855f7" alt="Views"/>
+      </p>
+      <ul>
+        <li>Simplifies Web3 interaction for non-technical beginners.</li>
+        <li>Supports Hive Signer, Keychain, and HiveAuth integrations.</li>
+        <li>Fast caching system via SQLite for zero delay user responses.</li>
+      </ul>
+      <a href="https://github.com/Life-Experimentalist/HiveXplore">🔗 View Repository</a>
+    </td>
+<td width="50%" valign="top">
+      <h3>😊 Facial-Emotion-Detector</h3>
+      <p><em>Real-time emotion classifier using MediaPipe.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+        <img src="https://img.shields.io/badge/MediaPipe-00C0FF?style=flat-square&logo=google&logoColor=white" />
+        <img src="https://counter.vkrishna04.me/api/views/Facial-Emotion-Detector/badge?color=a855f7" alt="Views"/>
+      </p>
+      <ul>
+        <li>Extracts facial landmarks and classifies emotions in real-time.</li>
+        <li>Trained custom ML model yielding 98% prediction accuracy.</li>
+        <li>Awarded at Tredence InfinityAI national corporate hackathon.</li>
+      </ul>
+      <a href="https://github.com/Life-Experimentalist/Facial-Emotion-Detector">🔗 View Repository</a>
+    </td>
+  </tr>
+  <tr>
+<td width="50%" valign="top">
       <h3>🧰 portfolio-creator</h3>
       <p><em>Fill in a form, get a portfolio.</em></p>
       <p>
@@ -455,7 +473,7 @@
       </ul>
       <a href="https://github.com/Life-Experimentalist/portfolio-creator">🔗 View Repository</a> • <a href="https://life-experimentalist.github.io/portfolio-creator/">🌐 Website</a>
     </td>
-    <td width="50%" valign="top">
+<td width="50%" valign="top">
       <h3>🎥 Vectra-180</h3>
       <p><em>A dual-fisheye dashcam for the Pi Compute Module 5.</em></p>
       <p>
@@ -472,6 +490,8 @@
     </td>
   </tr>
 </table>
+
+</details>
 
 ---
 
@@ -535,33 +555,21 @@
 
 <h2 align="center">📊 GitHub Analytics</h2>
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=vkrishna04&theme=darkhub&no-frame=true&row=1&column=7" alt="VKrishna04 Trophies" />
-</p>
+<div align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=vkrishna04&theme=radical" alt="GitHub Profile Summary" />
+</div>
 
 <div align="center">
   <table>
     <tr>
       <td>
-        <img src="https://github-readme-stats.vercel.app/api?username=vkrishna04&show_icons=true&theme=radical&hide_border=true&count_private=true" alt="GitHub Stats" />
+        <img src="https://github-readme-streak-stats.herokuapp.com/?user=vkrishna04&theme=radical&hide_border=true" alt="GitHub Streak" />
       </td>
       <td>
-        <img src="https://github-readme-streak-stats.herokuapp.com/?user=vkrishna04&theme=radical&hide_border=true" alt="GitHub Streak" />
+        <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=vkrishna04&theme=radical" alt="Repos per Language" />
       </td>
     </tr>
   </table>
-</div>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=vkrishna04&theme=radical&hide_border=true&layout=compact&langs_count=10" alt="Top Languages" />
-</div>
-
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=vkrishna04&theme=react-dark&hide_border=true&area=true" alt="GitHub Activity Graph" />
-</div>
-
-<div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=vkrishna04&theme=radical" alt="GitHub Profile Summary" />
 </div>
 
 ---

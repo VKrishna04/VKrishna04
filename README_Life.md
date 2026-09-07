@@ -52,7 +52,7 @@
 
 <table width="100%">
   <tr>
-    <td width="50%" valign="top">
+<td width="50%" valign="top">
       <h3>💻 CodeLedger</h3>
       <p><em>LeetCode DSA Auto-Commit Browser Extension.</em></p>
       <p>
@@ -63,20 +63,7 @@
       <p>Manifest V3 browser extension that intercepts accepted DSA solutions, runs inline AI code review, and commits them to user's GitHub, auto-generating a live Pages dashboard.</p>
       <a href="https://github.com/Life-Experimentalist/Code-Ledger">🔗 View Repository</a>
     </td>
-    <td width="50%" valign="top">
-      <h3>⏳ Chronos-Ledger</h3>
-      <p><em>Multi-dimensional timetable engine for campus scheduling and beyond.</em></p>
-      <p>
-        <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square" />
-        <img src="https://img.shields.io/badge/FastAPI-005571?style=flat-square" />
-        <img src="https://counter.vkrishna04.me/api/views/chronos-ledger/badge?color=a855f7" alt="Views"/>
-      </p>
-      <p>Dockerized, offline-first timetabling and geofenced attendance system with 3D GPS checks, reverse RSVP scheduling, and real-time WebSockets. Campus-first, generalizing to any domain that needs an efficiently queryable, sliceable timetable.</p>
-      <a href="https://github.com/Life-Experimentalist/chronos-ledger">🔗 View Repository</a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
+<td width="50%" valign="top">
       <h3>🚪 CogniGate</h3>
       <p><em>Self-hosted, multi-tenant LLM gateway.</em></p>
       <p>
@@ -87,7 +74,9 @@
       <p>Go gateway where clients use one key and the standard OpenAI API while provider credentials never leave your deployment. Live at cognigate.vkrishna04.me.</p>
       <a href="https://github.com/Life-Experimentalist/CogniGate">🔗 View Repository</a>
     </td>
-    <td width="50%" valign="top">
+  </tr>
+  <tr>
+<td width="50%" valign="top">
       <h3>🧠 EquiLens</h3>
       <p><em>LLM Bias Auditing & Evaluation System.</em></p>
       <p>
@@ -98,9 +87,7 @@
       <p>Multi-metric bias detection CLI for local LLMs via Ollama, generating structured fairness audit data, statistics, and graphs (published on Zenodo).</p>
       <a href="https://github.com/Life-Experimentalist/EquiLens">🔗 View Repository</a>
     </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
+<td width="50%" valign="top">
       <h3>🧹 dev-prune</h3>
       <p><em>Reclaim disk space from idle Git repositories.</em></p>
       <p>
@@ -111,7 +98,43 @@
       <p>Rust CLI that deletes node_modules, .venv, target, and vendor from idle repos only after the project's own package manager proves a lockfile can rebuild them. On the org's Homebrew tap and Scoop bucket.</p>
       <a href="https://github.com/Life-Experimentalist/dev-prune">🔗 View Repository</a>
     </td>
-    <td width="50%" valign="top">
+  </tr>
+  <tr>
+<td width="50%" valign="top">
+      <h3>📚 RanobeGemini</h3>
+      <p><em>AI reading companion for web novels and fanfiction, published on Firefox Add-ons and Edge Add-ons.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/Firefox_Add--on-orange?style=flat-square" />
+        <img src="https://img.shields.io/badge/Gemini_AI-purple?style=flat-square" />
+        <img src="https://counter.vkrishna04.me/api/views/RanobeGemini/badge?color=a855f7" alt="Views"/>
+      </p>
+      <p>Published Firefox extension that translates and enhances web novels on ranobes.top, FanFiction.net, AO3 and ScribbleHub, with a bring-your-own-provider design (Gemini, any OpenAI-compatible endpoint, or local Ollama) and a shelf-aware reading library.</p>
+      <a href="https://github.com/Life-Experimentalist/RanobeGemini">🔗 View Repository</a> • <a href="https://addons.mozilla.org/en-US/firefox/addon/ranobegemini/">🦊 Firefox Add-ons</a> • <a href="https://microsoftedge.microsoft.com/addons/detail/ranobe-gemini/agbhdkiciomjlifhlfbjanpnhhokaimn">🌐 Edge Add-ons</a>
+    </td>
+<td width="50%" valign="top">
+      <h3>⚡ ViewFlare</h3>
+      <p><em>Serverless view counters: one POST to count, one image URL for the badge.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/Cloudflare_Workers-F38020?style=flat-square" />
+        <img src="https://counter.vkrishna04.me/api/views/ViewFlare/badge?color=a855f7" alt="Views"/>
+      </p>
+      <p>Serverless view counter on Cloudflare Workers and D1: one POST increments, one image URL renders a configurable SVG badge, with optional unique-visitor analytics and CI-checked endpoints. Live at counter.vkrishna04.me, powering every view badge on this page.</p>
+      <a href="https://github.com/Life-Experimentalist/ViewFlare">🔗 View Repository</a>
+    </td>
+  </tr>
+  <tr>
+<td width="50%" valign="top">
+      <h3>⏳ Chronos-Ledger</h3>
+      <p><em>Multi-dimensional timetable engine for campus scheduling and beyond.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square" />
+        <img src="https://img.shields.io/badge/FastAPI-005571?style=flat-square" />
+        <img src="https://counter.vkrishna04.me/api/views/chronos-ledger/badge?color=a855f7" alt="Views"/>
+      </p>
+      <p>Dockerized, offline-first timetabling and geofenced attendance system with 3D GPS checks, reverse RSVP scheduling, and real-time WebSockets. Campus-first, generalizing to any domain that needs an efficiently queryable, sliceable timetable.</p>
+      <a href="https://github.com/Life-Experimentalist/chronos-ledger">🔗 View Repository</a>
+    </td>
+<td width="50%" valign="top">
       <h3>🪪 LoginLens</h3>
       <p><em>Which account, OAuth provider, and MFA method you used on every site.</em></p>
       <p>
@@ -123,18 +146,14 @@
       <a href="https://github.com/Life-Experimentalist/LoginLens">🔗 View Repository</a>
     </td>
   </tr>
+</table>
+
+<details>
+<summary><strong>More organization projects</strong></summary>
+
+<table width="100%">
   <tr>
-    <td width="50%" valign="top">
-      <h3>⚡ ViewFlare</h3>
-      <p><em>Serverless view counters: one POST to count, one image URL for the badge.</em></p>
-      <p>
-        <img src="https://img.shields.io/badge/Cloudflare_Workers-F38020?style=flat-square" />
-        <img src="https://counter.vkrishna04.me/api/views/ViewFlare/badge?color=a855f7" alt="Views"/>
-      </p>
-      <p>Serverless view counter on Cloudflare Workers and D1: one POST increments, one image URL renders a configurable SVG badge, with optional unique-visitor analytics and CI-checked endpoints. Live at counter.vkrishna04.me, powering every view badge on this page.</p>
-      <a href="https://github.com/Life-Experimentalist/ViewFlare">🔗 View Repository</a>
-    </td>
-    <td width="50%" valign="top">
+<td width="50%" valign="top">
       <h3>🏥 PulseWard-HMS</h3>
       <p><em>Hospital management platform.</em></p>
       <p>
@@ -144,20 +163,7 @@
       <p>Proprietary, closed-source project in a private repository. Project overview available on the founder's portfolio.</p>
       <a href="https://vkrishna04.me/projects/pulseward-hms">🔗 Project Overview</a>
     </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>📚 RanobeGemini</h3>
-      <p><em>AI reading companion for web novels and fanfiction.</em></p>
-      <p>
-        <img src="https://img.shields.io/badge/Firefox_Add--on-orange?style=flat-square" />
-        <img src="https://img.shields.io/badge/Gemini_AI-purple?style=flat-square" />
-        <img src="https://counter.vkrishna04.me/api/views/RanobeGemini/badge?color=a855f7" alt="Views"/>
-      </p>
-      <p>Published Firefox extension that translates and enhances web novels on ranobes.top, FanFiction.net, AO3 and ScribbleHub, with a bring-your-own-provider design (Gemini, any OpenAI-compatible endpoint, or local Ollama) and a shelf-aware reading library.</p>
-      <a href="https://github.com/Life-Experimentalist/RanobeGemini">🔗 View Repository</a> • <a href="https://addons.mozilla.org/en-US/firefox/addon/ranobegemini/">🦊 Firefox Add-ons</a>
-    </td>
-    <td width="50%" valign="top">
+<td width="50%" valign="top">
       <h3>📝 cspell-sync</h3>
       <p><em>VS Code dictionary synchronizer.</em></p>
       <p>
@@ -170,31 +176,7 @@
     </td>
   </tr>
   <tr>
-    <td width="50%" valign="top">
-      <h3>🐝 HiveXplore</h3>
-      <p><em>Simplified Web3 Hive Social Media Portal.</em></p>
-      <p>
-        <img src="https://img.shields.io/badge/Flask-grey?style=flat-square" />
-        <img src="https://img.shields.io/badge/Hive_Web3-red?style=flat-square" />
-        <img src="https://counter.vkrishna04.me/api/views/HiveXplore/badge?color=a855f7" alt="Views"/>
-      </p>
-      <p>Onboarding decentralized social media web application designed to welcome newcomers without technical complexity (IIT Delhi CodeHive Runner-up).</p>
-      <a href="https://github.com/Life-Experimentalist/HiveXplore">🔗 View Repository</a>
-    </td>
-    <td width="50%" valign="top">
-      <h3>😊 Facial-Emotion-Detector</h3>
-      <p><em>Real-Time Facial Landmark & Emotion Classifier.</em></p>
-      <p>
-        <img src="https://img.shields.io/badge/Python-blue?style=flat-square" />
-        <img src="https://img.shields.io/badge/MediaPipe-cyan?style=flat-square" />
-        <img src="https://counter.vkrishna04.me/api/views/Facial-Emotion-Detector/badge?color=a855f7" alt="Views"/>
-      </p>
-      <p>Extracts facial landmarks and classifies emotions in real-time using MediaPipe and machine learning (Tredence InfinityAI runner-up).</p>
-      <a href="https://github.com/Life-Experimentalist/Facial-Emotion-Detector">🔗 View Repository</a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
+<td width="50%" valign="top">
       <h3>🤟 SignLanguageDetector</h3>
       <p><em>Real-time sign language detection with in-browser inference.</em></p>
       <p>
@@ -205,7 +187,7 @@
       <p>Webcam frames run through MediaPipe landmarks into a RandomForest classifier, with a training CLI, model analytics, a REST API, and in-browser inference. Live at sign.vkrishna04.me.</p>
       <a href="https://github.com/Life-Experimentalist/SignLanguageDetector">🔗 View Repository</a>
     </td>
-    <td width="50%" valign="top">
+<td width="50%" valign="top">
       <h3>💾 Save-Sync</h3>
       <p><em>Save points for code, for when git is overkill.</em></p>
       <p>
@@ -218,7 +200,31 @@
     </td>
   </tr>
   <tr>
-    <td width="50%" valign="top">
+<td width="50%" valign="top">
+      <h3>🐝 HiveXplore</h3>
+      <p><em>Simplified Web3 Hive Social Media Portal.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/Flask-grey?style=flat-square" />
+        <img src="https://img.shields.io/badge/Hive_Web3-red?style=flat-square" />
+        <img src="https://counter.vkrishna04.me/api/views/HiveXplore/badge?color=a855f7" alt="Views"/>
+      </p>
+      <p>Onboarding decentralized social media web application designed to welcome newcomers without technical complexity (IIT Delhi CodeHive Runner-up).</p>
+      <a href="https://github.com/Life-Experimentalist/HiveXplore">🔗 View Repository</a>
+    </td>
+<td width="50%" valign="top">
+      <h3>😊 Facial-Emotion-Detector</h3>
+      <p><em>Real-Time Facial Landmark & Emotion Classifier.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/Python-blue?style=flat-square" />
+        <img src="https://img.shields.io/badge/MediaPipe-cyan?style=flat-square" />
+        <img src="https://counter.vkrishna04.me/api/views/Facial-Emotion-Detector/badge?color=a855f7" alt="Views"/>
+      </p>
+      <p>Extracts facial landmarks and classifies emotions in real-time using MediaPipe and machine learning (Tredence InfinityAI runner-up).</p>
+      <a href="https://github.com/Life-Experimentalist/Facial-Emotion-Detector">🔗 View Repository</a>
+    </td>
+  </tr>
+  <tr>
+<td width="50%" valign="top">
       <h3>🧰 portfolio-creator</h3>
       <p><em>Fill in a form, get a portfolio.</em></p>
       <p>
@@ -229,7 +235,7 @@
       <p>Guided form that generates a settings file for the same JSON-driven template powering vkrishna04.me, validating every field against the portfolio's own JSON Schema. Download the file, or let a scoped token create the repo and enable Pages for you.</p>
       <a href="https://github.com/Life-Experimentalist/portfolio-creator">🔗 View Repository</a> • <a href="https://life-experimentalist.github.io/portfolio-creator/">🌐 Website</a>
     </td>
-    <td width="50%" valign="top">
+<td width="50%" valign="top">
       <h3>🎥 Vectra-180</h3>
       <p><em>A dual-fisheye dashcam for the Pi Compute Module 5.</em></p>
       <p>
@@ -242,6 +248,8 @@
     </td>
   </tr>
 </table>
+
+</details>
 
 ---
 
@@ -279,7 +287,7 @@
     </tr>
   </table>
   <br/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=vkrishna04&theme=radical&hide_border=true&layout=compact&langs_count=10" alt="Languages Used" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=vkrishna04&theme=radical" alt="Repos per Language" />
 </div>
 
 ---
