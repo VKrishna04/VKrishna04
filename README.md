@@ -234,7 +234,7 @@
     </td>
     <td width="50%" valign="top">
       <h3>⏳ Chronos-Ledger</h3>
-      <p><em>Self-hosted, offline-first PWA for campus schedule & attendance.</em></p>
+      <p><em>Multi-dimensional timetable engine: built for campus scheduling and attendance, generalizing to any system that needs to query and slice complex schedules.</em></p>
       <p>
         <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white" />
         <img src="https://img.shields.io/badge/FastAPI-005571?style=flat-square&logo=fastapi&logoColor=white" />

@@ -65,13 +65,13 @@
     </td>
     <td width="50%" valign="top">
       <h3>⏳ Chronos-Ledger</h3>
-      <p><em>Campus Schedule & Attendance Management Platform.</em></p>
+      <p><em>Multi-dimensional timetable engine for campus scheduling and beyond.</em></p>
       <p>
         <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square" />
         <img src="https://img.shields.io/badge/FastAPI-005571?style=flat-square" />
         <img src="https://counter.vkrishna04.me/api/views/chronos-ledger/badge?color=a855f7" alt="Views"/>
       </p>
-      <p>Dockerized, offline-first campus timetabling and geofenced attendance system with 3D GPS checks, reverse RSVP scheduling, and real-time WebSockets.</p>
+      <p>Dockerized, offline-first timetabling and geofenced attendance system with 3D GPS checks, reverse RSVP scheduling, and real-time WebSockets. Campus-first, generalizing to any domain that needs an efficiently queryable, sliceable timetable.</p>
       <a href="https://github.com/Life-Experimentalist/chronos-ledger">🔗 View Repository</a>
     </td>
   </tr>
