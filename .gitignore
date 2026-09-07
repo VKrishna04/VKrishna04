@@ -18,3 +18,6 @@ Desktop.ini
 # Project Specific
 data.json
 .markdown
+.devprune.json
+.devprune-ignore
+ignore.devprune.json
